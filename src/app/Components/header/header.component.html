@@ -1,0 +1,53 @@
+<nav class="poppins-regular flex items-center justify-between p-4 border-b border-gray-200">
+    <div class="flex gap-2 items-center">
+        <img src="assets/icon.png" alt="Icon">
+        <h1 class="text-xl text-themeColor">Medifit</h1>
+    </div>
+    <div class="linkDiv flex gap-4">
+        <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="text-themeColor relative group">
+                <span class="relative">
+                    Home
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/shop" class="text-themeColor relative group">
+                <span class="relative">
+                    Shop
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/about" class="text-themeColor relative group">
+                <span class="relative">
+                    About
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/contact" class="text-themeColor relative group">
+                <span class="relative">
+                    Contact
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                </span>
+            </a>
+        </li>
+    </div>
+    <div class="buttonDiv flex gap-2">
+        <li>
+            <a routerLink="/search" class="text-xl text-themeColor"><i class='bx bx-search'></i></a>
+        </li>
+        <li>
+            <a routerLink="/cart" class="text-xl text-themeColor"><i class='bx bx-cart'></i></a>
+        </li>
+    </div>
+</nav>
