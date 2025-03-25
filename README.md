@@ -1,4 +1,5 @@
-# Medical
+# Medifit
+Medifit is a web application that allows users to search for doctors, book appointments, and manage their medical records.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 

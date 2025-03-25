@@ -1,0 +1,16 @@
+.home-right img {
+    width: 100%;
+    /* Make the image take the full width of its container */
+    max-width: 500px;
+    /* Optional: Prevents it from becoming too large */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra spacing */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+.home1 {
+    background-color: #f7f5e8;
+}

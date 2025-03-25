@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Medical": {
+    "Medifit": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/medical",
+            "outputPath": "dist/medifit",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Medical:build:production"
+              "buildTarget": "Medifit:build:production"
             },
             "development": {
-              "buildTarget": "Medical:build:development"
+              "buildTarget": "Medifit:build:development"
             }
           },
           "defaultConfiguration": "development"
