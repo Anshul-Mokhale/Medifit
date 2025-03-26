@@ -4,51 +4,50 @@
         <img src="assets/icon.png" alt="Icon">
         <h1 class="text-xl text-themeColor">Medifit</h1>
     </div>
-    <div class="linkDiv flex gap-4">
-        <li>
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+
+    <!-- Sidebar toggle button -->
+    <button class="md:hidden text-themeColor text-2xl" (click)="toggleSidebar()">
+        <i class='bx bx-menu'></i>
+    </button>
+
+    <!-- Main navigation links -->
+    <div class="linkDiv hidden md:flex gap-4">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
                 class="text-themeColor relative group">
-                <span class="relative">
-                    Home
-                    <span
-                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/shop" class="text-themeColor relative group">
-                <span class="relative">
-                    Shop
-                    <span
-                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/about" class="text-themeColor relative group">
-                <span class="relative">
-                    About
-                    <span
-                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/contact" class="text-themeColor relative group">
-                <span class="relative">
-                    Contact
-                    <span
-                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                </span>
-            </a>
-        </li>
+                <span class="relative">Home <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
+            </a></li>
+        <li><a routerLink="/shop" class="text-themeColor relative group">
+                <span class="relative">Shop <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
+            </a></li>
+        <li><a routerLink="/about" class="text-themeColor relative group">
+                <span class="relative">About <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
+            </a></li>
+        <li><a routerLink="/contact" class="text-themeColor relative group">
+                <span class="relative">Contact <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
+            </a></li>
     </div>
-    <div class="buttonDiv flex gap-2">
-        <li>
-            <a routerLink="/search" class="text-xl text-themeColor"><i class='bx bx-search'></i></a>
-        </li>
-        <li>
-            <a routerLink="/cart" class="text-xl text-themeColor"><i class='bx bx-cart'></i></a>
-        </li>
+
+    <!-- Icons for search and cart -->
+    <div class="buttonDiv hidden md:flex gap-2">
+        <li><a routerLink="/search" class="text-xl text-themeColor"><i class='bx bx-search'></i></a></li>
+        <li><a routerLink="/cart" class="text-xl text-themeColor"><i class='bx bx-cart'></i></a></li>
     </div>
 </nav>
+
+<!-- Sidebar -->
+<div class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out"
+    [ngClass]="{'translate-x-0': sidebarOpen}">
+    <button class="text-xl text-themeColor p-4" (click)="toggleSidebar()">&times;</button>
+    <ul class="flex flex-col gap-4 p-4">
+        <li><a routerLink="/" (click)="toggleSidebar()">Home</a></li>
+        <li><a routerLink="/shop" (click)="toggleSidebar()">Shop</a></li>
+        <li><a routerLink="/about" (click)="toggleSidebar()">About</a></li>
+        <li><a routerLink="/contact" (click)="toggleSidebar()">Contact</a></li>
+        <li><a routerLink="/search" (click)="toggleSidebar()"><i class='bx bx-search'></i> Search</a></li>
+        <li><a routerLink="/cart" (click)="toggleSidebar()"><i class='bx bx-cart'></i> Cart</a></li>
+    </ul>
+</div>
