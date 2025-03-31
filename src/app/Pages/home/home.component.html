@@ -1,9 +1,13 @@
 <div class="poppins-regular">
+    <!-- Home hero section -->
     <div class="flex flex-col-reverse md:flex-row justify-between items-center mt-16 p-8 home1">
         <div class="home-left flex flex-col gap-4">
-            <h1 class="text-6xl text-themeColor font-medium">Your trusted care now and always</h1>
-            <p>For the best results, align you health needs with your medication plan.</p>
-            <div>
+            <h1 class=" text-4xl text-center md:text-start md:text-6xl text-themeColor font-medium">Your trusted care
+                now and always
+            </h1>
+            <p class="text-center md:text-start">For the best results, align you health needs with your medication plan.
+            </p>
+            <div class="flex justify-center md:items-center md:justify-start">
                 <a routerLink="/shop" class="px-4 py-2 bg-themeColor rounded-lg text-white text-center"><i
                         class='bx bx-shopping-bag'></i>&nbsp;Shop
                     now</a>
@@ -13,40 +17,258 @@
             <img src="assets/images/homeImage.png" alt="Home Image">
         </div>
     </div>
-    <div class="home2 p-6 flex flex-col gap-8">
+    <!-- Home category section -->
+    <div class="home2 p-6 flex flex-col gap-8 bg-[#f3f0e7]">
         <h1 class="text-4xl text-center text-themeColor font-medium">Shop by Category</h1>
         <div class="category grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4">
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg s">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/medicine.svg"
-                    alt="Medicine">
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg s">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white"
+                    src="assets/icons/medicine.svg" alt="Medicine">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Medicine</h1>
             </a>
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg ">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/healthcare.svg"
-                    alt="Health Care">
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg ">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white"
+                    src="assets/icons/healthcare.svg" alt="Health Care">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Health Care</h1>
             </a>
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg ">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/beautycare.svg"
-                    alt="Beauty Care">
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg ">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white"
+                    src="assets/icons/beautycare.svg" alt="Beauty Care">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Beauty Care</h1>
             </a>
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg ">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/fitness.svg"
-                    alt="Fitness">
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg ">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white"
+                    src="assets/icons/fitness.svg" alt="Fitness">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Fitness</h1>
             </a>
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg ">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/lab.svg"
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg ">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white" src="assets/icons/lab.svg"
                     alt="Lab Equipment">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Lab Equipment</h1>
             </a>
-            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg ">
-                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18" src="assets/icons/medikit.svg"
-                    alt="Medikit">
+            <a routerLink="/shop/medicine" class="flex flex-col items-center justify-center p-4  rounded-lg ">
+                <img class="p-2 rounded-full border-2 border-themeColor w-18 h-18 bg-white"
+                    src="assets/icons/medikit.svg" alt="Medikit">
                 <h1 class="text-center text-themeColor text-sm md:text-base font-medium pt-2">Medikit</h1>
             </a>
         </div>
     </div>
+    <!-- Home advertisment section -->
+    <div class="home3 p-8 bg-[#f3f0e7] poppins-regular">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="card">
+                <div
+                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
+                    <!-- Text Section -->
+                    <div class="flex flex-col gap-6">
+                        <span
+                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                        <div>
+                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <div class="mt-2">
+                                <a routerLink="/shop/item"
+                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    <i class="bx bx-shopping-bag text-lg"></i> Shop now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Section -->
+                    <div class="relative mt-4 md:mt-0">
+                        <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70">
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="card">
+                <div
+                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
+                    <!-- Text Section -->
+                    <div class="flex flex-col gap-6">
+                        <span
+                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                        <div>
+                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <div class="mt-2">
+                                <a routerLink="/shop/item"
+                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    <i class="bx bx-shopping-bag text-lg"></i> Shop now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Section -->
+                    <div class="relative mt-4 md:mt-0">
+                        <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70">
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div
+                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
+                    <!-- Text Section -->
+                    <div class="flex flex-col gap-6">
+                        <span
+                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                        <div>
+                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <div class="mt-2">
+                                <a routerLink="/shop/item"
+                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    <i class="bx bx-shopping-bag text-lg"></i> Shop now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Section -->
+                    <div class="relative mt-4 md:mt-0">
+                        <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Health Product fetch automatic random things -->
+    <div class="p-4 bg-[#f3f0e7]">
+        <h1 class="text-4xl text-center mt-8 mb-4 text-themeColor">Latest Health Product</h1>
+        <div class="container mx-auto px-4 py-8">
+            <!-- Responsive Grid Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- Card Start -->
+                <div
+                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    <!-- Tag -->
+                    <span
+                        class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
+
+                    <!-- Image Container -->
+                    <div class="w-[100px]">
+                        <img src="assets/images/magnifine.png" alt="Microscope"
+                            class="w-full h-auto rounded-xl object-cover" />
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="mt-5 text-center w-full">
+                        <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
+                        <p class="text-lg text-gray-600 font-medium mt-1">$45.00 USD</p>
+                        <div class="mt-4">
+                            <a routerLink="/shop/item"
+                                class="px-6 py-2 bg-themeColor text-white font-semibold text-sm rounded-lg shadow-md hover:opacity-80 transition">
+                                <i class='bx bx-shopping-bag'></i> Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card End -->
+
+                <!-- Duplicate Cards -->
+                <div
+                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
+                    <div class="w-[100px]">
+                        <img src="assets/images/magnifine.png" alt="Microscope"
+                            class="w-full h-auto rounded-xl object-cover" />
+                    </div>
+                    <div class="mt-5 text-center w-full">
+                        <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
+                        <p class="text-lg text-gray-600 font-medium mt-1">$45.00 USD</p>
+                        <div class="mt-4">
+                            <a routerLink="/shop/item"
+                                class="px-6 py-2 bg-themeColor text-white font-semibold text-sm rounded-lg shadow-md hover:opacity-80 transition">
+                                <i class='bx bx-shopping-bag'></i> Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
+                    <div class="w-[100px]">
+                        <img src="assets/images/magnifine.png" alt="Microscope"
+                            class="w-full h-auto rounded-xl object-cover" />
+                    </div>
+                    <div class="mt-5 text-center w-full">
+                        <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
+                        <p class="text-lg text-gray-600 font-medium mt-1">$45.00 USD</p>
+                        <div class="mt-4">
+                            <a routerLink="/shop/item"
+                                class="px-6 py-2 bg-themeColor text-white font-semibold text-sm rounded-lg shadow-md hover:opacity-80 transition">
+                                <i class='bx bx-shopping-bag'></i> Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
+                    <div class="w-[100px]">
+                        <img src="assets/images/magnifine.png" alt="Microscope"
+                            class="w-full h-auto rounded-xl object-cover" />
+                    </div>
+                    <div class="mt-5 text-center w-full">
+                        <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
+                        <p class="text-lg text-gray-600 font-medium mt-1">$45.00 USD</p>
+                        <div class="mt-4">
+                            <a routerLink="/shop/item"
+                                class="px-6 py-2 bg-themeColor text-white font-semibold text-sm rounded-lg shadow-md hover:opacity-80 transition">
+                                <i class='bx bx-shopping-bag'></i> Shop Now</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-8 bg-[#f3f0e7]">
+        <div class="proces p-6 bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="step-item flex items-start gap-4 p-4">
+                    <div class="icon-wrapper">
+                        <div class="bg-[#f3f0e7] p-4 rounded-full flex items-center justify-center">
+                            <i class='bx bx-select-multiple text-themeColor text-[30px]'></i>
+                        </div>
+                    </div>
+                    <div class="text-content flex-1">
+                        <h1 class="text-xl font-medium mb-2">Browse and Select</h1>
+                        <p class="text-gray-600">Add the required items to your cart</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-item flex items-start gap-4 p-4">
+                    <div class="icon-wrapper">
+                        <div class="bg-[#f3f0e7] p-4 rounded-full flex items-center justify-center">
+                            <i class='bx bx-cart text-themeColor text-[30px]'></i>
+                        </div>
+                    </div>
+                    <div class="text-content flex-1">
+                        <h1 class="text-xl font-medium mb-2">Checkout Securely</h1>
+                        <p class="text-gray-600">Complete your purchase with our secure checkout process</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-item flex items-start gap-4 p-4">
+                    <div class="icon-wrapper">
+                        <div class="bg-[#f3f0e7] p-4 rounded-full flex items-center justify-center">
+                            <i class='bx bx-package text-themeColor text-[30px]'></i>
+                        </div>
+                    </div>
+                    <div class="text-content flex-1">
+                        <h1 class="text-xl font-medium mb-2">Receive your medication</h1>
+                        <p class="text-gray-600">We deliver your medications quickly and safely to your home</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
