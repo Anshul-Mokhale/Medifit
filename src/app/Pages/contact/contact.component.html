@@ -1,3 +1,141 @@
 <div class="mt-16">
+    <!-- Cotnact form section -->
+    <div class="p-4">
+        <h1 class="text-5xl text-center text-themeColor flex justify-center">Contact us<i class='bx bx-phone'></i></h1>
+        <form action="" class=" px-8 md:px-30 py-8 flex flex-col gap-4">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="w-full md:w-1/2">
+                    <h1>Full Name</h1>
+                    <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
+                        <i class='bx bx-user text-xl'></i><input type="text" class="w-full border-none outline-none">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1>Email</h1>
+                    <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
+                        <i class='bx bx-envelope text-xl'></i><input type="text"
+                            class="w-full border-none outline-none">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="w-full md:w-1/2">
+                    <h1>Phone number</h1>
+                    <div
+                        class="border-2 border-[#E2DFCF] focus:border-themeColor focus:ring-1 focus:ring-themeColor rounded-lg p-2 flex gap-1 items-center">
+                        <i class='bx bx-phone'></i><input type="text" class="w-full border-none outline-none ">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1>Subject</h1>
+                    <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
+                        <i class='bx bx-note'></i><input type="text" class="w-full border-none outline-none">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="w-full">
+                    <h1>Message</h1>
+                    <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
+                        <i class='bx bx-edit text-xl'></i>
+                        <textarea rows="4" class="w-full border-none outline-none resize-none"></textarea>
+                    </div>
+                </div>
 
+            </div>
+            <div>
+                <button
+                    class="bg-themeColor flex items-center gap-1 text-white px-4 py-2 rounded-md text-center hover:bg-[#4a3829] transition-colors duration-300">Send
+                    Message <i class='bx bx-pointer'></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- FAQ section -->
+    <div class="max-w-7xl mx-auto px-6 py-16 faq-section">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <!-- FAQ Title -->
+            <div>
+                <h2 class="text-4xl text-[#5B4B31] mb-4">Frequently Asked Questions<span class="text-5xl">?</span></h2>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-[#E2DFCF] rounded-lg overflow-hidden">
+                    <button (click)="toggleFaq(0)"
+                        class="w-full p-4 text-left flex justify-between items-center hover:bg-[#f8f6f0] transition-colors">
+                        <span class="text-lg text-[#5B4B31] flex items-center gap-2">
+                            What products do you offer?
+                        </span>
+                        <i class='bx' [class.bx-chevron-up]="activeIndex === 0"
+                            [class.bx-chevron-down]="activeIndex !== 0"></i>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300" [class.h-0]="activeIndex !== 0"
+                        [class.p-4]="activeIndex === 0">
+                        <p class="text-gray-700">
+                            We offer a wide range of medical supplies, including prescription medications,
+                            over-the-counter products, supplements, and personal care items.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-[#E2DFCF] rounded-lg overflow-hidden">
+                    <button (click)="toggleFaq(1)"
+                        class="w-full p-4 text-left flex justify-between items-center hover:bg-[#f8f6f0] transition-colors">
+                        <span class="text-lg text-[#5B4B31] flex items-center gap-2">
+                            How can I place an order?
+                        </span>
+                        <i class='bx' [class.bx-chevron-up]="activeIndex === 1"
+                            [class.bx-chevron-down]="activeIndex !== 1"></i>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300" [class.h-0]="activeIndex !== 1"
+                        [class.p-4]="activeIndex === 1">
+                        <p class="text-gray-700">
+                            You can place an order through our website by browsing our products,
+                            adding items to your cart, and completing the checkout process.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-[#E2DFCF] rounded-lg overflow-hidden">
+                    <button (click)="toggleFaq(2)"
+                        class="w-full p-4 text-left flex justify-between items-center hover:bg-[#f8f6f0] transition-colors">
+                        <span class="text-lg text-[#5B4B31] flex items-center gap-2">
+                            Do you provide home delivery?
+                        </span>
+                        <i class='bx' [class.bx-chevron-up]="activeIndex === 2"
+                            [class.bx-chevron-down]="activeIndex !== 2"></i>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300" [class.h-0]="activeIndex !== 2"
+                        [class.p-4]="activeIndex === 2">
+                        <p class="text-gray-700">
+                            Yes, we provide home delivery services. Our delivery network ensures
+                            your medical supplies reach you safely and on time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-[#E2DFCF] rounded-lg overflow-hidden">
+                    <button (click)="toggleFaq(3)"
+                        class="w-full p-4 text-left flex justify-between items-center hover:bg-[#f8f6f0] transition-colors">
+                        <span class="text-lg text-[#5B4B31] flex items-center gap-2">
+                            Can I return or exchange products?
+                        </span>
+                        <i class='bx' [class.bx-chevron-up]="activeIndex === 3"
+                            [class.bx-chevron-down]="activeIndex !== 3"></i>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300" [class.h-0]="activeIndex !== 3"
+                        [class.p-4]="activeIndex === 3">
+                        <p class="text-gray-700">
+                            Yes, we have a return and exchange policy. Please review our policy
+                            details or contact our customer service for assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

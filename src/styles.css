@@ -5,6 +5,14 @@
     --color-themeColor: #503217;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .poppins-regular {
     font-family: "Poppins", sans-serif;

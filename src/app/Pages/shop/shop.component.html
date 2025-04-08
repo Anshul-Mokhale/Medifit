@@ -1,1 +1,31 @@
-<p>shop works!</p>
+<!-- Toggle Button -->
+<div class="mt-2 md:mt-15 w-full">
+    <div class="container">
+        <button class="sidebar-toggle" (click)="toggleSidebar()">☰ Categories</button>
+
+        <!-- Sidebar -->
+        <div class="sidebar" [class.open]="showSidebar">
+            <h2 class="hidden md:block">Categories</h2>
+            <ul>
+                <li><a routerLink="/shop" routerLinkActive="active" (click)="closeSidebar()">All</a></li>
+                <li><a routerLink="/shop/pain-relief" routerLinkActive="active" (click)="closeSidebar()">Pain Relief</a>
+                </li>
+                <li><a routerLink="/shop/antibiotics" routerLinkActive="active" (click)="closeSidebar()">Antibiotics</a>
+                </li>
+                <li><a routerLink="/shop/vitamins" routerLinkActive="active" (click)="closeSidebar()">Vitamins</a></li>
+                <li><a routerLink="/shop/skin-care" routerLinkActive="active" (click)="closeSidebar()">Skin Care</a>
+                </li>
+                <li><a routerLink="/shop/baby-products" routerLinkActive="active" (click)="closeSidebar()">Baby
+                        Products</a>
+                </li>
+                <li><a routerLink="/shop/first-aid" routerLinkActive="active" (click)="closeSidebar()">First Aid</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
