@@ -1,9 +1,10 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-allitem',
-  imports: [NgFor],
+  imports: [NgFor, RouterModule],
   templateUrl: './allitem.component.html',
   styleUrl: './allitem.component.css'
 })

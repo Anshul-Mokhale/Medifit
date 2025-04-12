@@ -33,21 +33,53 @@
 
     <!-- Icons for search and cart -->
     <div class="buttonDiv hidden md:flex gap-2">
-        <li><a routerLink="/search" class="text-xl text-themeColor"><i class='bx bx-search'></i></a></li>
         <li><a routerLink="/cart" class="text-xl text-themeColor"><i class='bx bx-cart'></i></a></li>
+        <li><a routerLink="/search" class="text-xl text-themeColor"><i class='bx bx-user'></i></a></li>
     </div>
 </nav>
 
 <!-- Sidebar -->
-<div class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-[999]"
+<div class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-[9999]"
     [ngClass]="{'translate-x-0': sidebarOpen}">
     <button class="text-xl text-themeColor p-4" (click)="toggleSidebar()">&times;</button>
-    <ul class="flex flex-col gap-4 p-4">
-        <li><a routerLink="/" (click)="toggleSidebar()">Home</a></li>
-        <li><a routerLink="/shop" (click)="toggleSidebar()">Shop</a></li>
-        <li><a routerLink="/about" (click)="toggleSidebar()">About</a></li>
-        <li><a routerLink="/contact" (click)="toggleSidebar()">Contact</a></li>
-        <li><a routerLink="/search" (click)="toggleSidebar()"><i class='bx bx-search'></i> Search</a></li>
-        <li><a routerLink="/cart" (click)="toggleSidebar()"><i class='bx bx-cart'></i> Cart</a></li>
+    <ul class="flex flex-col gap-2 p-4">
+        <li>
+            <a routerLink="/" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-home text-lg'></i> Home
+            </a>
+        </li>
+        <li>
+            <a routerLink="/shop" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-store text-lg'></i> Shop
+            </a>
+        </li>
+        <li>
+            <a routerLink="/about" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-info-circle text-lg'></i> About
+            </a>
+        </li>
+        <li>
+            <a routerLink="/contact" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-envelope text-lg'></i> Contact
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/cart" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-cart text-lg'></i> Cart
+            </a>
+        </li>
+        <li>
+            <a routerLink="/search" (click)="toggleSidebar()"
+                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
+                <i class='bx bx-user text-lg'></i> Login
+            </a>
+        </li>
     </ul>
+
 </div>

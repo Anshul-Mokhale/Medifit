@@ -56,83 +56,101 @@
     <!-- Home advertisment section -->
     <div class="home3 p-8 bg-[#f3f0e7] poppins-regular">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="card">
+            <!-- Card -->
+            <div class="card group transition-transform duration-300 hover:scale-[1.02]">
                 <div
-                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
+                    class="m-4 bg-white shadow-md hover:shadow-xl transition-shadow px-6 rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+
                     <!-- Text Section -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 md:gap-6 py-4 md:py-8 w-full md:w-1/2">
                         <span
-                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                            class="bg-[#C4815A] text-white w-fit px-3 text-center py-1 rounded-full text-sm">Sanitizer</span>
                         <div>
-                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <h2 class="text-2xl font-semibold text-[#5B4228] leading-tight">Hand sanitizer collection
+                            </h2>
                             <div class="mt-2">
                                 <a routerLink="/shop/item"
-                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    class="flex items-center gap-2 text-[#8F7D6A] font-medium border-b-2 border-themeColor w-fit py-1 hover:text-[#C4815A] transition-colors">
                                     <i class="bx bx-shopping-bag text-lg"></i> Shop now
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <!-- Image Section -->
-                    <div class="relative mt-4 md:mt-0">
-                        <!-- <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70"> -->
-                        <img src="https://m.media-amazon.com/images/I/51PnL9IMQfL.jpg" alt="Hand Sanitizer"
-                            class="w-50 md:w-70">
+                    <div class="relative w-full md:w-1/2 p-4">
+                        <div class="overflow-hidden rounded-xl">
+                            <img src="https://m.media-amazon.com/images/I/51PnL9IMQfL.jpg" alt="Hand Sanitizer"
+                                class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Repeat Card 2 and Card 3 similarly -->
+            <!-- You can replace the image source and it will remain responsive -->
+
             <!-- Card 2 -->
-            <div class="card">
+            <div class="card group transition-transform duration-300 hover:scale-[1.02]">
                 <div
-                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
-                    <!-- Text Section -->
-                    <div class="flex flex-col gap-6">
+                    class="m-4 bg-white shadow-md hover:shadow-xl transition-shadow px-6 rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+
+                    <div class="flex flex-col gap-4 md:gap-6 py-4 md:py-8 w-full md:w-1/2">
                         <span
-                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                            class="bg-[#C4815A] text-white w-fit px-3 text-center py-1 rounded-full text-sm">Sanitizer</span>
                         <div>
-                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <h2 class="text-2xl font-semibold text-[#5B4228] leading-tight">Hand sanitizer collection
+                            </h2>
                             <div class="mt-2">
                                 <a routerLink="/shop/item"
-                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    class="flex items-center gap-2 text-[#8F7D6A] font-medium border-b-2 border-themeColor w-fit py-1 hover:text-[#C4815A] transition-colors">
                                     <i class="bx bx-shopping-bag text-lg"></i> Shop now
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Image Section -->
-                    <div class="relative mt-4 md:mt-0">
-                        <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70">
+
+                    <div class="relative w-full md:w-1/2 p-4">
+                        <div class="overflow-hidden rounded-xl">
+                            <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer"
+                                class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="card">
+
+            <!-- Card 3 (copy structure again) -->
+            <div class="card group transition-transform duration-300 hover:scale-[1.02]">
                 <div
-                    class="m-4 bg-white px-6 rounded-xl flex flex-col-reverse pb-4 md:py-0 md:flex-row items-center justify-between ">
-                    <!-- Text Section -->
-                    <div class="flex flex-col gap-6">
+                    class="m-4 bg-white shadow-md hover:shadow-xl transition-shadow px-6 rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+
+                    <div class="flex flex-col gap-4 md:gap-6 py-4 md:py-8 w-full md:w-1/2">
                         <span
-                            class="bg-[#C4815A] text-white w-25 text-center py-1 rounded-full text-sm">Sanitizer</span>
+                            class="bg-[#C4815A] text-white w-fit px-3 text-center py-1 rounded-full text-sm">Sanitizer</span>
                         <div>
-                            <h2 class="text-2xl text-[#5B4228]">Hand sanitizer collection</h2>
+                            <h2 class="text-2xl font-semibold text-[#5B4228] leading-tight">Hand sanitizer collection
+                            </h2>
                             <div class="mt-2">
                                 <a routerLink="/shop/item"
-                                    class=" gap-2 text-[#8F7D6A] border-b-2 border-themeColor py-1">
+                                    class="flex items-center gap-2 text-[#8F7D6A] font-medium border-b-2 border-themeColor w-fit py-1 hover:text-[#C4815A] transition-colors">
                                     <i class="bx bx-shopping-bag text-lg"></i> Shop now
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Image Section -->
-                    <div class="relative mt-4 md:mt-0">
-                        <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer" class="w-50 md:w-70">
+
+                    <div class="relative w-full md:w-1/2 p-4">
+                        <div class="overflow-hidden rounded-xl">
+                            <img src="assets/images/sanitizer.jpg" alt="Hand Sanitizer"
+                                class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 
     <!-- Latest Health Product fetch automatic random things -->
     <div class="p-4 bg-[#f3f0e7]">
@@ -143,15 +161,15 @@
 
                 <!-- Card Start -->
                 <div
-                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    class="bg-white p-6 rounded-2xl overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
                     <!-- Tag -->
                     <span
                         class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
 
                     <!-- Image Container -->
-                    <div class="w-[100px]">
+                    <div class="w-full flex justify-center">
                         <img src="https://m.media-amazon.com/images/I/51PnL9IMQfL.jpg" alt="Microscope"
-                            class="w-[70] h-auto rounded-xl object-cover" />
+                            class="max-h-40 w-auto object-contain rounded-xl transition-transform duration-300" />
                     </div>
 
                     <!-- Product Info -->
@@ -167,14 +185,16 @@
                 </div>
                 <!-- Card End -->
 
-                <!-- Duplicate Cards -->
+                <!-- Duplicate Cards (Copy-Paste with updated images if needed) -->
+
                 <div
-                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    class="bg-white p-6 rounded-2xl overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
                     <span
                         class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
-                    <div class="w-[100px]">
+                    <div class="w-full flex justify-center">
                         <img src="https://m.media-amazon.com/images/I/61Q2gwt85PL._AC_UF1000,1000_QL80_.jpg"
-                            alt="Microscope" class="w-[70] h-auto rounded-xl object-cover" />
+                            alt="Microscope"
+                            class="max-h-40 w-auto object-contain rounded-xl transition-transform duration-300" />
                     </div>
                     <div class="mt-5 text-center w-full">
                         <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
@@ -188,12 +208,12 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    class="bg-white p-6 rounded-2xl overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
                     <span
                         class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
-                    <div class="w-[100px]">
+                    <div class="w-full flex justify-center">
                         <img src="assets/images/magnifine.png" alt="Microscope"
-                            class="w-full h-auto rounded-xl object-cover" />
+                            class="max-h-40 w-auto object-contain rounded-xl transition-transform duration-300" />
                     </div>
                     <div class="mt-5 text-center w-full">
                         <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
@@ -207,12 +227,12 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-2xl  overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
+                    class="bg-white p-6 rounded-2xl overflow-hidden flex flex-col items-center relative transition-transform transform hover:scale-105 duration-300">
                     <span
                         class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-md font-semibold">New</span>
-                    <div class="w-[100px]">
+                    <div class="w-full flex justify-center">
                         <img src="assets/images/magnifine.png" alt="Microscope"
-                            class="w-full h-auto rounded-xl object-cover" />
+                            class="max-h-40 w-auto object-contain rounded-xl transition-transform duration-300" />
                     </div>
                     <div class="mt-5 text-center w-full">
                         <h3 class="text-xl font-bold text-gray-900">Microscope</h3>
@@ -222,9 +242,9 @@
                                 class="px-6 py-2 bg-themeColor text-white font-semibold text-sm rounded-lg shadow-md hover:opacity-80 transition">
                                 <i class='bx bx-shopping-bag'></i> Shop Now</a>
                         </div>
-
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

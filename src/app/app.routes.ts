@@ -5,6 +5,7 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { ShopComponent } from './Pages/shop/shop.component';
 import { PainReliefComponent } from './shop/pages/pain-relief/pain-relief.component';
 import { AllitemComponent } from './shop/pages/allitem/allitem.component';
+import { ItempageComponent } from './shop/pages/itempage/itempage.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
         children: [
             { path: '', component: AllitemComponent },
             { path: 'pain-relief', component: PainReliefComponent },
+            { path: 'item/:id', component: ItempageComponent },
             //   { path: 'antibiotics', component: AntibioticsComponent },
             //   { path: 'vitamins', component: VitaminsComponent },
             //   { path: 'skin-care', component: SkinCareComponent },

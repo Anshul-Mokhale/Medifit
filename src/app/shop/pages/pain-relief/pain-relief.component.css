@@ -1,0 +1,57 @@
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    /* Adjusted min size for mobile */
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.item-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    /* Make image height responsive */
+    aspect-ratio: 3 / 2;
+    /* Keeps 3:2 ratio on all screen sizes */
+    object-fit: cover;
+    background-color: #f3f3f3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Force 2 items per row on small devices */
+    }
+
+    .item-content {
+        padding: 12px;
+    }
+
+    .item-title {
+        font-size: 16px;
+    }
+
+    .item-description {
+        font-size: 13px;
+    }
+
+    .item-price {
+        font-size: 14px;
+    }
+
+    .add-to-cart {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}

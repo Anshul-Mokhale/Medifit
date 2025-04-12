@@ -7,7 +7,8 @@
         <div class="sidebar" [class.open]="showSidebar">
             <h2 class="hidden md:block">Categories</h2>
             <ul>
-                <li><a routerLink="/shop" routerLinkActive="active" (click)="closeSidebar()">All</a></li>
+                <li><a routerLink="/shop" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        (click)="closeSidebar()">All</a></li>
                 <li><a routerLink="/shop/pain-relief" routerLinkActive="active" (click)="closeSidebar()">Pain Relief</a>
                 </li>
                 <li><a routerLink="/shop/antibiotics" routerLinkActive="active" (click)="closeSidebar()">Antibiotics</a>
