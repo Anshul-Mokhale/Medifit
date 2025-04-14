@@ -1,0 +1,109 @@
+<div class="bg-gray-100 flex justify-center items-center min-h-screen poppins-regular">
+
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg m-4 p-6 sm:p-8">
+        <!-- Logo and Name -->
+        <div class="flex justify-center items-center mb-6 sm:mb-8">
+            <a routerLink="/"><img src="assets/icon.png" alt="Medifit Logo" class="logo mr-2"></a>
+            <!-- Replace "logo.png" with the actual logo path -->
+            <h2 class="text-3xl sm:text-4xl font-semibold text-custom">Medifit</h2>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center text-custom mb-6 sm:mb-8">Create Your Account</h2>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+
+                <!-- Name Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="name" class="block text-sm sm:text-base font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="email" class="block text-sm sm:text-base font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                </div>
+
+                <!-- Phone Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="phone" class="block text-sm sm:text-base font-medium text-gray-700">Phone</label>
+                    <input type="tel" id="phone" name="phone"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="password" class="block text-sm sm:text-base font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                </div>
+
+                <!-- Age Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="age" class="block text-sm sm:text-base font-medium text-gray-700">Age</label>
+                    <input type="number" id="age" name="age"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                </div>
+
+                <!-- Gender Dropdown -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="gender" class="block text-sm sm:text-base font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                        <option value="" selected disabled>Select one</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Blood Group Dropdown -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="blood_group" class="block text-sm sm:text-base font-medium text-gray-700">Blood
+                        Group</label>
+                    <select id="blood_group" name="blood_group"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        required>
+                        <option value="" selected disabled>Select one</option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="O-">O-</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <!-- Identity Proof Image Input -->
+                <div class="mb-4 sm:mb-6">
+                    <label for="identity_proof" class="block text-sm sm:text-base font-medium text-gray-700">Identity
+                        Proof Image</label>
+                    <input type="file" id="identity_proof" name="identity_proof"
+                        class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"
+                        accept="image/*" required>
+                </div>
+
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full py-3 bg-custom text-white rounded-md hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-custom text-sm sm:text-base">Register</button>
+        </form>
+
+        <p class="mt-4 sm:mt-6 text-center text-sm text-gray-600">Already have an account?
+            <a href="#" class="text-custom font-medium">Login</a>
+        </p>
+    </div>
+
+</div>

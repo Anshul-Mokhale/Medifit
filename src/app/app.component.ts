@@ -3,10 +3,11 @@ import { RouterModule } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule],
+  imports: [RouterModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

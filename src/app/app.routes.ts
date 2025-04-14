@@ -11,6 +11,8 @@ import { ShopComponent } from './Pages/shop/shop.component';
 import { AllitemComponent } from './shop/pages/allitem/allitem.component';
 import { PainReliefComponent } from './shop/pages/pain-relief/pain-relief.component';
 import { ItempageComponent } from './shop/pages/itempage/itempage.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { SigninComponent } from './Auth/signin/signin.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +39,8 @@ export const routes: Routes = [
         path: '',
         component: BlankLayoutComponent,
         children: [
+            { path: 'login', component: LoginComponent },
+            { path: 'signin', component: SigninComponent },
             { path: '**', component: NotfoundComponent }
         ]
     }

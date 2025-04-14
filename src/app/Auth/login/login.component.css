@@ -1,0 +1,13 @@
+.bg-custom {
+    background-color: #503217;
+}
+
+.text-custom {
+    color: #503217;
+}
+
+.logo {
+    width: 50px;
+    /* Adjust logo size */
+    height: auto;
+}
