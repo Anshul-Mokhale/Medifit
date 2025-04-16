@@ -6,9 +6,14 @@
     </div>
 
     <!-- Sidebar toggle button -->
-    <button class="md:hidden text-themeColor text-2xl" (click)="toggleSidebar()">
-        <i class='bx bx-menu'></i>
-    </button>
+    <div class="flex md:hidden gap-4 items-center">
+        <a routerLink="/cart" class="text-2xl text-themeColor"><i class='bx bx-cart'></i></a>
+
+        <button class="text-themeColor text-2xl" (click)="toggleSidebar()">
+            <i class='bx bx-menu'></i>
+        </button>
+    </div>
+
 
     <!-- Main navigation links -->
     <div class="linkDiv hidden md:flex gap-4">
@@ -17,16 +22,17 @@
                 <span class="relative">Home <span
                         class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
             </a></li>
-        <li><a routerLink="/shop" class="text-themeColor relative group">
-                <span class="relative">Shop <span
-                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
-            </a></li>
+
         <li><a routerLink="/about" class="text-themeColor relative group">
                 <span class="relative">About <span
                         class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
             </a></li>
         <li><a routerLink="/contact" class="text-themeColor relative group">
                 <span class="relative">Contact <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
+            </a></li>
+        <li><a routerLink="/shop" class="text-themeColor relative group">
+                <span class="relative">Shop <span
                         class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-themeColor group-hover:w-full group-hover:left-0 transition-all duration-300"></span></span>
             </a></li>
     </div>
@@ -39,7 +45,7 @@
 </nav>
 
 <!-- Sidebar -->
-<div class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-[9999]"
+<div class="fixed top-0 left-0 h-full w-64 bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-[9999]"
     [ngClass]="{'translate-x-0': sidebarOpen}">
     <button class="text-xl text-themeColor p-4" (click)="toggleSidebar()">&times;</button>
     <ul class="flex flex-col gap-2 p-4">
@@ -49,12 +55,7 @@
                 <i class='bx bx-home text-lg'></i> Home
             </a>
         </li>
-        <li>
-            <a routerLink="/shop" (click)="toggleSidebar()"
-                class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
-                <i class='bx bx-store text-lg'></i> Shop
-            </a>
-        </li>
+
         <li>
             <a routerLink="/about" (click)="toggleSidebar()"
                 class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
@@ -67,11 +68,10 @@
                 <i class='bx bx-envelope text-lg'></i> Contact
             </a>
         </li>
-
         <li>
-            <a routerLink="/cart" (click)="toggleSidebar()"
+            <a routerLink="/shop" (click)="toggleSidebar()"
                 class="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">
-                <i class='bx bx-cart text-lg'></i> Cart
+                <i class='bx bx-store text-lg'></i> Shop
             </a>
         </li>
         <li>

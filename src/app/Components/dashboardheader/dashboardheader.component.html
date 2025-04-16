@@ -1,0 +1,33 @@
+<!-- Navbar -->
+<header
+    class="poppins-regular fixed top-0 left-0 right-0 h-16 bg-white shadow-md z-[999] flex items-center justify-between px-6">
+    <div class="flex items-center space-x-4">
+        <!-- Hamburger for mobile -->
+        <button (click)="toggleSidebar()" class="md:hidden text-black focus:outline-none">
+            <i class='bx bx-menu text-2xl'></i>
+        </button>
+        <div class="flex items-center gap-2">
+            <img src="assets/icon.png" alt="Logo" class="w-8 h-8 object-contain" />
+            <h1 class="text-xl text-themeColor font-semibold hidden md:block">Medifit</h1>
+        </div>
+    </div>
+    <div class="text-sm text-black font-medium">Welcome, Admin</div>
+</header>
+
+<!-- Sidebar -->
+<aside id="sidebar"
+    class="fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-white shadow-xl overflow-y-auto z-[99] transform transition-transform duration-300 md:translate-x-0 -translate-x-full md:block sidBar"
+    [ngClass]="{'translate-x-0': sidebarOpen}">
+    <nav class="flex flex-col p-4 space-y-2 text-themeColor text-start">
+        <a routerLink="/admin/dashboard" routerLinkActive="active"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bxs-dashboard text-xl'></i>
+            <span class="text-md font-medium">Home</span>
+        </a>
+        <a routerLink="/admin/users" routerLinkActive="active"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-user text-xl'></i>
+            <span class="text-md font-medium">Users</span>
+        </a>
+    </nav>
+</aside>

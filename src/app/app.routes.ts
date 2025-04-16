@@ -13,6 +13,10 @@ import { PainReliefComponent } from './shop/pages/pain-relief/pain-relief.compon
 import { ItempageComponent } from './shop/pages/itempage/itempage.component';
 import { LoginComponent } from './Auth/login/login.component';
 import { SigninComponent } from './Auth/signin/signin.component';
+import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { AdminhomeComponent } from './Dashboard/adminhome/adminhome.component';
+import { AdminusersComponent } from './Dashboard/adminusers/adminusers.component';
+
 
 export const routes: Routes = [
     {
@@ -41,7 +45,16 @@ export const routes: Routes = [
         children: [
             { path: 'login', component: LoginComponent },
             { path: 'signin', component: SigninComponent },
-            { path: '**', component: NotfoundComponent }
+
         ]
-    }
+    },
+    {
+        path: 'admin',
+        component: DashboardLayoutComponent,
+        children: [
+            { path: 'dashboard', component: AdminhomeComponent },
+            { path: 'users', component: AdminusersComponent }
+        ]
+    },
+    { path: '**', component: NotfoundComponent }
 ];
