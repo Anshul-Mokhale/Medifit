@@ -16,6 +16,8 @@ import { SigninComponent } from './Auth/signin/signin.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { AdminhomeComponent } from './Dashboard/adminhome/adminhome.component';
 import { AdminusersComponent } from './Dashboard/adminusers/adminusers.component';
+import { UserhomeComponent } from './Dashboard/Users/userhome/userhome.component';
+import { TransactionComponent } from './Dashboard/Users/transaction/transaction.component';
 
 
 export const routes: Routes = [
@@ -54,6 +56,14 @@ export const routes: Routes = [
         children: [
             { path: 'dashboard', component: AdminhomeComponent },
             { path: 'users', component: AdminusersComponent }
+        ]
+    },
+    {
+        path: 'user',
+        component: DashboardLayoutComponent,
+        children: [
+            { path: 'dashboard', component: UserhomeComponent },
+            { path: 'transactions', component: TransactionComponent },
         ]
     },
     { path: '**', component: NotfoundComponent }
