@@ -4,10 +4,13 @@ import { Router, NavigationEnd } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
+import { ContactServiceService } from './Services/contact-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, FormsModule],
+  imports: [RouterModule, FormsModule, HttpClientModule],
+  providers: [ContactServiceService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,89 @@
+/* Center the popup and animate the checkmark */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-green-500 {
+    color: #10b981;
+}
+
+.text-gray-700 {
+    color: #4a5568;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a3829;
+}
+
+.bg-themeColor {
+    background-color: #4a3829;
+    /* Replace with your theme color */
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.transition-colors {
+    transition: background-color 0.3s ease;
+}
+
+/* Checkmark animation */
+.text-green-500 {
+    animation: checkmark 1s ease-in-out;
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.loader {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

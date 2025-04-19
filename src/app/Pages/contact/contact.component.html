@@ -2,19 +2,22 @@
     <!-- Cotnact form section -->
     <div class="p-4">
         <h1 class="text-5xl text-center text-themeColor flex justify-center">Contact us<i class='bx bx-phone'></i></h1>
-        <form action="" class=" px-8 md:px-30 py-8 flex flex-col gap-4">
+        <form (ngSubmit)="onSubmit($event)" class="px-8 md:px-30 py-8 flex flex-col gap-4">
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full md:w-1/2">
                     <h1>Full Name</h1>
                     <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
-                        <i class='bx bx-user text-xl'></i><input type="text" class="w-full border-none outline-none">
+                        <i class='bx bx-user text-xl'></i>
+                        <input type="text" class="w-full border-none outline-none" [(ngModel)]="formData.name"
+                            name="name" required>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
                     <h1>Email</h1>
                     <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
-                        <i class='bx bx-envelope text-xl'></i><input type="text"
-                            class="w-full border-none outline-none">
+                        <i class='bx bx-envelope text-xl'></i>
+                        <input type="email" class="w-full border-none outline-none" [(ngModel)]="formData.email"
+                            name="email" required>
                     </div>
                 </div>
             </div>
@@ -23,13 +26,17 @@
                     <h1>Phone number</h1>
                     <div
                         class="border-2 border-[#E2DFCF] focus:border-themeColor focus:ring-1 focus:ring-themeColor rounded-lg p-2 flex gap-1 items-center">
-                        <i class='bx bx-phone'></i><input type="text" class="w-full border-none outline-none ">
+                        <i class='bx bx-phone'></i>
+                        <input type="tel" class="w-full border-none outline-none" [(ngModel)]="formData.phone"
+                            name="phone" required>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
                     <h1>Subject</h1>
                     <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
-                        <i class='bx bx-note'></i><input type="text" class="w-full border-none outline-none">
+                        <i class='bx bx-note'></i>
+                        <input type="text" class="w-full border-none outline-none" [(ngModel)]="formData.subject"
+                            name="subject" required>
                     </div>
                 </div>
             </div>
@@ -38,18 +45,41 @@
                     <h1>Message</h1>
                     <div class="border-2 border-[#E2DFCF] rounded-lg p-2 flex gap-1 items-center">
                         <i class='bx bx-edit text-xl'></i>
-                        <textarea rows="4" class="w-full border-none outline-none resize-none"></textarea>
+                        <textarea rows="4" class="w-full border-none outline-none resize-none"
+                            [(ngModel)]="formData.message" name="message" required></textarea>
                     </div>
                 </div>
-
             </div>
             <div>
-                <button
-                    class="bg-themeColor flex items-center gap-1 text-white px-4 py-2 rounded-md text-center hover:bg-[#4a3829] transition-colors duration-300">Send
-                    Message <i class='bx bx-pointer'></i></button>
+                <button type="submit" [disabled]="loading"
+                    class="bg-themeColor flex items-center gap-2 text-white px-4 py-2 rounded-md text-center hover:bg-[#4a3829] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+
+                    <ng-container *ngIf="!loading">
+                        Send Message <i class='bx bx-pointer'></i>
+                    </ng-container>
+
+                    <ng-container *ngIf="loading">
+                        <span class="loader"></span> Sending...
+                    </ng-container>
+
+                </button>
+
             </div>
         </form>
     </div>
+
+    <!-- Success Popup -->
+    <div *ngIf="showSuccessPopup" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-8 rounded-md shadow-lg text-center">
+            <div class="text-green-500 text-5xl">
+                <i class='bx bx-check-circle'></i>
+            </div>
+            <p class="text-gray-700 mt-2">Thank you for reaching out. We will get back to you soon.</p>
+            <button (click)="closePopup()" class="mt-4 px-6 py-2 bg-themeColor text-white rounded-md">Close</button>
+        </div>
+    </div>
+
+
     <!-- FAQ section -->
     <div class="max-w-7xl mx-auto px-6 py-16 faq-section">
         <div class="grid md:grid-cols-2 gap-8 items-start">
