@@ -32,30 +32,38 @@ export class ContactComponent {
   constructor(private contactService: ContactServiceService) { }
 
   onSubmit(event: Event) {
-    event.preventDefault();
-    this.loading = true;
-    this.successMessage = '';
-    this.isError = false;
+    event.preventDefault(); // Prevents the default form submission behavior (like page reload)
 
+    this.loading = true; // Sets loading to true (can be used to show a spinner or disable the form)
+    this.successMessage = ''; // Clears any previous success message
+    this.isError = false; // Resets the error flag
+
+    // Calls the contact service to send the form data
     this.contactService.sendContactData(this.formData).subscribe({
-      next: (response) => {
-        console.log('Form submitted successfully', response);
-        this.successMessage = 'Your message has been sent successfully!';
-        this.isError = false;
-        this.showSuccessPopup = true;
+      next: (response) => { // If the HTTP request succeeds
+        console.log('Form submitted successfully', response); // Logs success response in the console
+        this.successMessage = 'Thank you for reaching out. We will get back to you soon!'; // Shows success message to the user
+        this.isError = false; // Ensures error flag is false
+        this.showSuccessPopup = true; // Triggers a popup or alert to show success
       },
       error: (error) => {
-        console.error('There was an error submitting the form', error);
-        this.successMessage = 'Failed to send the mail. Please try again later.';
-        this.isError = true;
-        this.showSuccessPopup = true;
-      },
-      complete: () => {
         this.loading = false;
-        console.log('Form submission complete');
+        this.isError = true;
+
+        // Try to extract a readable error message from backend
+        const backendMessage = error?.error?.message || error?.message || 'Failed to send the mail. Please try again later.';
+
+        this.successMessage = backendMessage;
+        this.showSuccessPopup = true; // Show error popup with message
+      }
+      ,
+      complete: () => { // Runs after either success or error (always runs last)
+        this.loading = false; // Turns off the loading indicator
+        console.log('Form submission complete'); // Logs that the request process has completed
       }
     });
   }
+
 
 
 
