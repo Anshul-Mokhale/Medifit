@@ -1,0 +1,102 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+        <a routerLink="/admin/delivery-persons" class=" text-xl text-[#503217] flex items-center justify-center"><i
+                class='bx bx-left-arrow-alt text-4xl '></i> Back
+        </a>
+
+    </div>
+    <!-- User Profile Card -->
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <!-- Card Header with Profile Picture -->
+        <div class="bg-[#503217] p-4 flex items-center justify-between">
+            <!-- Profile Picture -->
+            <div class="mr-4">
+                <div class="w-16 h-16 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- User Info -->
+            <div class="text-white">
+                <h1 class="text-2xl font-bold">Alex Johnson</h1>
+
+            </div>
+        </div>
+
+        <!-- Card Body - Two Column Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Left Column -->
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <i class='bx bx-envelope text-xl text-[#503217] mr-3'></i>
+                    <div>
+                        <p class="text-sm text-gray-500">Email</p>
+                        <p class="font-medium">{{userEmail}}</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class='bx bx-phone text-xl text-[#503217] mr-3'></i>
+                    <div>
+                        <p class="text-sm text-gray-500">Phone</p>
+                        <p class="font-medium">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <i class='bx bx-cake text-xl text-[#503217] mr-3'></i>
+                    <div>
+                        <p class="text-sm text-gray-500">Age</p>
+                        <p class="font-medium">32</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <i class='bx bx-male-female text-xl text-[#503217] mr-3'></i>
+                    <div>
+                        <p class="text-sm text-gray-500">Gender</p>
+                        <p class="font-medium capitalize">Male</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <i class='bx bx-droplet text-xl text-[#503217] mr-3'></i>
+                    <div>
+                        <p class="text-sm text-gray-500">Blood Group</p>
+                        <p class="font-medium">O+</p>
+                    </div>
+                </div>
+
+                <!-- Identity Proof Image -->
+                <div>
+                    <p class="text-sm text-gray-500 mb-2 flex items-center">
+                        <i class='bx bx-id-card text-xl text-[#503217] mr-3'></i>
+                        Driver's License
+                    </p>
+                    <div class="border rounded-lg p-2 bg-gray-50">
+                        <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202304/untitled_design_90-sixteen_nine.jpg"
+                            alt="Driver's License" class="max-w-full h-auto rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="bg-gray-50 px-6 py-4 border-t">
+            <div class="flex flex-wrap justify-between text-sm text-gray-600">
+                <div class="flex items-center mb-2 md:mb-0">
+                    <i class='bx bx-calendar-plus mr-2'></i>
+                    <span>Created: May 15, 2023</span>
+                </div>
+                <div class="flex items-center">
+                    <i class='bx bx-calendar-edit mr-2'></i>
+                    <span>Updated: Apr 2, 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

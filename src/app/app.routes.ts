@@ -18,6 +18,15 @@ import { AdminhomeComponent } from './Dashboard/adminhome/adminhome.component';
 import { AdminusersComponent } from './Dashboard/adminusers/adminusers.component';
 import { UserhomeComponent } from './Dashboard/Users/userhome/userhome.component';
 import { TransactionComponent } from './Dashboard/Users/transaction/transaction.component';
+import { AdminagentComponent } from './Dashboard/adminagent/adminagent.component';
+import { AdmindeliveryComponent } from './Dashboard/admindelivery/admindelivery.component';
+import { AdminitemComponent } from './Dashboard/adminitem/adminitem.component';
+import { AdminorderComponent } from './Dashboard/adminorder/adminorder.component';
+import { AdminsupportComponent } from './Dashboard/adminsupport/adminsupport.component';
+import { AdmincontactComponent } from './Dashboard/admincontact/admincontact.component';
+import { AdminviewuserComponent } from './Dashboard/adminviewuser/adminviewuser.component';
+import { AdminviewagentComponent } from './Dashboard/adminviewagent/adminviewagent.component';
+import { AdminviewdeliveryComponent } from './Dashboard/adminviewdelivery/adminviewdelivery.component';
 
 
 export const routes: Routes = [
@@ -55,7 +64,16 @@ export const routes: Routes = [
         component: DashboardLayoutComponent,
         children: [
             { path: 'dashboard', component: AdminhomeComponent },
-            { path: 'users', component: AdminusersComponent }
+            { path: 'users', component: AdminusersComponent, },
+            { path: 'users/view/:id', component: AdminviewuserComponent },
+            { path: 'agents', component: AdminagentComponent },
+            { path: 'agents/view/:id', component: AdminviewagentComponent },
+            { path: 'delivery-persons', component: AdmindeliveryComponent },
+            { path: 'delivery-persons/view/:id', component: AdminviewdeliveryComponent },
+            { path: 'items-listed', component: AdminitemComponent },
+            { path: 'orders', component: AdminorderComponent },
+            { path: 'support-tickets', component: AdminsupportComponent },
+            { path: 'contact-requests', component: AdmincontactComponent }
         ]
     },
     {

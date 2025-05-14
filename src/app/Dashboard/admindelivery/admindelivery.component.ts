@@ -3,23 +3,22 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-interface User {
+interface Delivery {
   id: number;
   name: string;
   email: string;
   created_at: string;
 }
-
 @Component({
-  selector: 'app-adminusers',
+  selector: 'app-admindelivery',
   imports: [RouterModule, FormsModule, NgClass, NgFor],
-  templateUrl: './adminusers.component.html',
-  styleUrl: './adminusers.component.css'
+  templateUrl: './admindelivery.component.html',
+  styleUrl: './admindelivery.component.css'
 })
-export class AdminusersComponent implements OnInit {
-  users: User[] = [];
-  filteredUsers: User[] = [];
-  paginatedUsers: User[] = [];
+export class AdmindeliveryComponent implements OnInit {
+  users: Delivery[] = [];
+  filteredUsers: Delivery[] = [];
+  paginatedUsers: Delivery[] = [];
 
   searchTerm = '';
   sortDirection: { [key: string]: boolean } = {};
@@ -65,7 +64,7 @@ export class AdminusersComponent implements OnInit {
     this.updatePaginatedUsers();
   }
 
-  sortBy(field: keyof User): void {
+  sortBy(field: keyof Delivery): void {
     this.sortDirection[field] = !this.sortDirection[field];
     this.filteredUsers.sort((a, b) => {
       if (a[field]! < b[field]!) return this.sortDirection[field] ? -1 : 1;
@@ -91,3 +90,4 @@ export class AdminusersComponent implements OnInit {
     return Math.ceil(this.filteredUsers.length / this.entriesPerPage);
   }
 }
+

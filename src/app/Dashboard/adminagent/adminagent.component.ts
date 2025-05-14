@@ -3,23 +3,23 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-interface User {
+
+interface Agent {
   id: number;
   name: string;
   email: string;
   created_at: string;
 }
-
 @Component({
-  selector: 'app-adminusers',
+  selector: 'app-adminagent',
   imports: [RouterModule, FormsModule, NgClass, NgFor],
-  templateUrl: './adminusers.component.html',
-  styleUrl: './adminusers.component.css'
+  templateUrl: './adminagent.component.html',
+  styleUrl: './adminagent.component.css'
 })
-export class AdminusersComponent implements OnInit {
-  users: User[] = [];
-  filteredUsers: User[] = [];
-  paginatedUsers: User[] = [];
+export class AdminagentComponent implements OnInit {
+  users: Agent[] = [];
+  filteredUsers: Agent[] = [];
+  paginatedUsers: Agent[] = [];
 
   searchTerm = '';
   sortDirection: { [key: string]: boolean } = {};
@@ -65,7 +65,7 @@ export class AdminusersComponent implements OnInit {
     this.updatePaginatedUsers();
   }
 
-  sortBy(field: keyof User): void {
+  sortBy(field: keyof Agent): void {
     this.sortDirection[field] = !this.sortDirection[field];
     this.filteredUsers.sort((a, b) => {
       if (a[field]! < b[field]!) return this.sortDirection[field] ? -1 : 1;
@@ -91,3 +91,4 @@ export class AdminusersComponent implements OnInit {
     return Math.ceil(this.filteredUsers.length / this.entriesPerPage);
   }
 }
+

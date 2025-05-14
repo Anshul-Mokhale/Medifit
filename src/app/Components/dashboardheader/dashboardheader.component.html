@@ -11,7 +11,12 @@
             <h1 class="text-xl text-themeColor  hidden md:block">Medifit</h1>
         </a>
     </div>
-    <div class="text-sm text-black font-medium">Welcome, Admin</div>
+    <button
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#503217] text-white hover:bg-[#6b462a] shadow-md transition duration-300">
+        <i class='bx bx-power-off text-xl'></i>
+        <span class="font-medium">Logout</span>
+    </button>
+
 </header>
 
 <!-- Sidebar -->
@@ -22,12 +27,42 @@
         <a routerLink="/admin/dashboard" routerLinkActive="active" (click)="toggleSidebar()"
             class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
             <i class='bx bxs-dashboard text-xl'></i>
-            <span class="text-md font-medium">Home</span>
+            <span class="text-md font-medium">Dashboard</span>
         </a>
         <a routerLink="/admin/users" routerLinkActive="active" (click)="toggleSidebar()"
             class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
             <i class='bx bx-user text-xl'></i>
             <span class="text-md font-medium">Users</span>
+        </a>
+        <a routerLink="/admin/agents" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-user text-xl'></i>
+            <span class="text-md font-medium">Agents</span>
+        </a>
+        <a routerLink="/admin/delivery-persons" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-user text-xl'></i>
+            <span class="text-md font-medium">Delivery Person</span>
+        </a>
+        <a routerLink="/admin/items-listed" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-box text-xl'></i>
+            <span class="text-md font-medium">Items Listed</span>
+        </a>
+        <a routerLink="/admin/orders" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-package text-xl'></i>
+            <span class="text-md font-medium">Orders</span>
+        </a>
+        <a routerLink="/admin/support-tickets" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-notepad text-xl'></i>
+            <span class="text-md font-medium">Support Tickets</span>
+        </a>
+        <a routerLink="/admin/contact-requests" routerLinkActive="active" (click)="toggleSidebar()"
+            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+            <i class='bx bx-support text-xl'></i>
+            <span class="text-md font-medium">Contact Request</span>
         </a>
     </nav>
 </aside>
