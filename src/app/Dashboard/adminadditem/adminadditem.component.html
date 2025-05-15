@@ -1,0 +1,100 @@
+<main class="ml-0 md:ml-64 mt-16 p-6 min-h-screen bg-[#f3f1e2] transition-all duration-300 poppins-regular">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+        <a routerLink="/admin/items-listed" class=" text-xl text-[#503217] flex items-center justify-center"><i
+                class='bx bx-left-arrow-alt text-4xl '></i> Back
+        </a>
+
+    </div>
+    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-[#5B4228] mb-6">Add New Item</h2>
+
+        <form class="space-y-6">
+            <!-- Row 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Item Name</label>
+                    <input type="text"
+                        class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-300"
+                        placeholder="Hand Sanitizer">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Unit</label>
+                    <input type="text" class="w-full border rounded-lg px-4 py-2" placeholder="500ml Bottle">
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                    <select class="w-full border rounded-lg px-4 py-2">
+                        <option>Health Care</option>
+                        <option>Medicine</option>
+                        <option>Beauty Care</option>
+                        <option>Fitness</option>
+                        <option>Equipment</option>
+                        <option>Medikit</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Subcategory</label>
+                    <input type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Hygiene Essentials">
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                <textarea class="w-full border rounded-lg px-4 py-2" rows="3"
+                    placeholder="Brief product description here..."></textarea>
+            </div>
+
+            <!-- Usage and Precaution -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Usage</label>
+                    <textarea class="w-full border rounded-lg px-4 py-2" rows="2"
+                        placeholder="How to use this item..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Precaution</label>
+                    <textarea class="w-full border rounded-lg px-4 py-2" rows="2"
+                        placeholder="Safety tips, warnings, etc."></textarea>
+                </div>
+            </div>
+
+            <!-- Price, Expiry, Quantity -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Price (₹)</label>
+                    <input type="number" class="w-full border rounded-lg px-4 py-2" placeholder="49">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+                    <input type="date" class="w-full border rounded-lg px-4 py-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Remaining Quantity</label>
+                    <input type="number" class="w-full border rounded-lg px-4 py-2" placeholder="100">
+                </div>
+            </div>
+
+            <!-- Created By -->
+            <div class="grid grid-cols-1 ">
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Item Image</label>
+                    <input type="file" class="w-full border rounded-lg px-4 py-2 bg-white">
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-4">
+                <button type="submit"
+                    class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all">
+                    Add Item
+                </button>
+            </div>
+        </form>
+    </div>
+</main>

@@ -27,6 +27,8 @@ import { AdmincontactComponent } from './Dashboard/admincontact/admincontact.com
 import { AdminviewuserComponent } from './Dashboard/adminviewuser/adminviewuser.component';
 import { AdminviewagentComponent } from './Dashboard/adminviewagent/adminviewagent.component';
 import { AdminviewdeliveryComponent } from './Dashboard/adminviewdelivery/adminviewdelivery.component';
+import { AdminviewitemComponent } from './Dashboard/adminviewitem/adminviewitem.component';
+import { AdminadditemComponent } from './Dashboard/adminadditem/adminadditem.component';
 
 
 export const routes: Routes = [
@@ -71,6 +73,8 @@ export const routes: Routes = [
             { path: 'delivery-persons', component: AdmindeliveryComponent },
             { path: 'delivery-persons/view/:id', component: AdminviewdeliveryComponent },
             { path: 'items-listed', component: AdminitemComponent },
+            { path: 'items-listed/item/:id', component: AdminviewitemComponent },
+            { path: 'items-listed/add-item', component: AdminadditemComponent },
             { path: 'orders', component: AdminorderComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
             { path: 'contact-requests', component: AdmincontactComponent }

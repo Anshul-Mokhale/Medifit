@@ -21,7 +21,7 @@
 
 <!-- Sidebar -->
 <aside id="sidebar"
-    class="fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-white shadow-xl overflow-y-auto z-[99] transform transition-transform duration-300 md:translate-x-0 -translate-x-full md:block sidBar"
+    class="no-scrollbar fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-white shadow-xl overflow-y-auto z-[99] transform transition-transform duration-300 md:translate-x-0 -translate-x-full md:block sidBar"
     [ngClass]="{'translate-x-0': sidebarOpen}">
     <nav class="flex flex-col p-4 space-y-2 text-themeColor text-start">
         <a routerLink="/admin/dashboard" routerLinkActive="active" (click)="toggleSidebar()"
@@ -44,11 +44,49 @@
             <i class='bx bx-user text-xl'></i>
             <span class="text-md font-medium">Delivery Person</span>
         </a>
-        <a routerLink="/admin/items-listed" routerLinkActive="active" (click)="toggleSidebar()"
-            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
-            <i class='bx bx-box text-xl'></i>
-            <span class="text-md font-medium">Items Listed</span>
-        </a>
+        <!-- Items Listed Dropdown -->
+        <div class="flex flex-col space-y-1">
+            <button (click)="itemsDropdownOpen = !itemsDropdownOpen"
+                class="flex items-center justify-between p-2 rounded-md hover:bg-[#e2dfcc] text-themeColor transition duration-200 w-full">
+                <span class="flex items-center space-x-2">
+                    <i class="bx bx-box text-xl"></i>
+                    <span class="text-md font-medium">Items Listed</span>
+                </span>
+                <i class="bx" [ngClass]="itemsDropdownOpen ? 'bx-chevron-up' : 'bx-chevron-down'"></i>
+            </button>
+
+            <div *ngIf="itemsDropdownOpen" class="ml-8 flex flex-col space-y-1 text-sm text-themeColor">
+                <a routerLink="/admin/items-listed" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    All Items
+                </a>
+                <a routerLink="/admin/items-listed/medicine" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Medicine
+                </a>
+                <a routerLink="/admin/items-listed/health-care" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Health Care
+                </a>
+                <a routerLink="/admin/items-listed/beauty-care" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Beauty Care
+                </a>
+                <a routerLink="/admin/items-listed/fitness" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Fitness
+                </a>
+                <a routerLink="/admin/items-listed/equipment" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Equipment
+                </a>
+                <a routerLink="/admin/items-listed/medikit" routerLinkActive="active" (click)="toggleSidebar()"
+                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
+                    Medikit
+                </a>
+            </div>
+        </div>
+
         <a routerLink="/admin/orders" routerLinkActive="active" (click)="toggleSidebar()"
             class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
             <i class='bx bx-package text-xl'></i>
