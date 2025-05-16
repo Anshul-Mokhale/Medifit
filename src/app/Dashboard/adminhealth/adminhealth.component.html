@@ -2,32 +2,13 @@
     class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
 
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-        <h1 class="text-2xl font-semibold text-[#503217]">Orders</h1>
+        <h1 class="text-2xl font-semibold text-[#503217]">Health Care</h1>
         <div class="flex items-center text-md gap-1 text-gray-600 mt-2 md:mt-0">
             <a routerLink="/admin/dashboard" class="hover:underline cursor-pointer">Dashboard</a>
             <!-- <span>&gt;</span> -->
             <span>/</span>
-            <p class="text-[#503217] font-medium">Orders</p>
+            <p class="text-[#503217] font-medium">Health Care</p>
         </div>
-    </div>
-    <div class="flex flex-col gap-4 p-4">
-        <div class="flex flex-col md:flex-row md:items-center justify-between">
-            <a class=" bg-yellow-500 text-white w-42 p-2 rounded-lg ">
-                <span class="flex items-center gap-1"><i class='bx bx-time-five text-xl'></i> Order Pending</span>
-            </a>
-            <a class=" bg-orange-500 text-white w-42 p-2 rounded-lg">
-                <span class="flex items-center gap-1"><i class='bx bx-check-square text-xl'></i> Order Processed</span>
-            </a>
-        </div>
-        <div class="flex flex-col md:flex-row md:items-center justify-between">
-            <a class=" bg-green-500 text-white w-42 p-2 rounded-lg">
-                <span class="flex items-center gap-1"><i class='bx bxs-truck text-xl'></i> Order Delivered</span>
-            </a>
-            <a class=" bg-red-500 text-white w-42 p-2 rounded-lg">
-                <span class="flex items-center gap-1"><i class='bx bx-x text-2xl'></i>Order Cancled</span>
-            </a>
-        </div>
-
     </div>
 
     <div class="bg-white shadow p-3 rounded-lg">
@@ -53,10 +34,9 @@
                     <tr>
                     <tr>
                         <th class="p-2 cursor-pointer" (click)="sortBy('id')">ID ⬍</th>
-                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('name')">User Name ⬍</th>
-                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('company')">User Email ⬍</th>
-                        <th class="p-2 cursor-pointer text-start">Status </th>
-                        <th class="p-2 cursor-pointer text-start">Delivery Person </th>
+                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('name')">Item Name ⬍</th>
+                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('company')">Item Company ⬍</th>
+                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('category')">Item Category ⬍</th>
                         <th class="p-2 cursor-pointer" (click)="sortBy('created_at')">Created At ⬍</th>
                         <th class="p-2">Action</th>
                     </tr>
@@ -66,8 +46,7 @@
                         <td class="p-2 text-center">{{ user.id }}</td>
                         <td class="p-2">{{ user.name }}</td>
                         <td class="p-2">{{ user.company }}</td>
-                        <td class="p-2">{{ user.status }}</td>
-                        <td class="p-2">{{ user.person }}</td>
+                        <td class="p-2">{{ user.category }}</td>
                         <td class="p-2 text-center">{{ user.created_at }}</td>
                         <td class="p-2 flex items-center justify-center gap-2">
                             <button class="px-3 py-1 text-themeColor"><i class='bx bx-trash text-xl'></i></button>

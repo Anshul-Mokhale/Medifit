@@ -11,11 +11,16 @@
             <h1 class="text-xl text-themeColor  hidden md:block">Medifit</h1>
         </a>
     </div>
-    <button
+    <!-- <button
         class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#503217] text-white hover:bg-[#6b462a] shadow-md transition duration-300">
         <i class='bx bx-power-off text-xl'></i>
         <span class="font-medium">Logout</span>
-    </button>
+    </button> -->
+    <a routerLink="/login"
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#503217] text-white hover:bg-[#6b462a] shadow-md transition duration-300">
+        <i class='bx bx-power-off text-xl'></i>
+        <span class="font-medium">Logout</span>
+    </a>
 
 </header>
 
@@ -56,7 +61,7 @@
             </button>
 
             <div *ngIf="itemsDropdownOpen" class="ml-8 flex flex-col space-y-1 text-sm text-themeColor">
-                <a routerLink="/admin/items-listed" routerLinkActive="active" (click)="toggleSidebar()"
+                <a routerLink="/admin/items-listed/all-items" routerLinkActive="active" (click)="toggleSidebar()"
                     class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
                     All Items
                 </a>

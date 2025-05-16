@@ -29,6 +29,12 @@ import { AdminviewagentComponent } from './Dashboard/adminviewagent/adminviewage
 import { AdminviewdeliveryComponent } from './Dashboard/adminviewdelivery/adminviewdelivery.component';
 import { AdminviewitemComponent } from './Dashboard/adminviewitem/adminviewitem.component';
 import { AdminadditemComponent } from './Dashboard/adminadditem/adminadditem.component';
+import { AdminmedicineComponent } from './Dashboard/adminmedicine/adminmedicine.component';
+import { AdminhealthComponent } from './Dashboard/adminhealth/adminhealth.component';
+import { AdminbeautyComponent } from './Dashboard/adminbeauty/adminbeauty.component';
+import { AdminfitnessComponent } from './Dashboard/adminfitness/adminfitness.component';
+import { AdminequipmentComponent } from './Dashboard/adminequipment/adminequipment.component';
+import { AdminmedikitComponent } from './Dashboard/adminmedikit/adminmedikit.component';
 
 
 export const routes: Routes = [
@@ -72,9 +78,15 @@ export const routes: Routes = [
             { path: 'agents/view/:id', component: AdminviewagentComponent },
             { path: 'delivery-persons', component: AdmindeliveryComponent },
             { path: 'delivery-persons/view/:id', component: AdminviewdeliveryComponent },
-            { path: 'items-listed', component: AdminitemComponent },
+            { path: 'items-listed/all-items', component: AdminitemComponent },
             { path: 'items-listed/item/:id', component: AdminviewitemComponent },
             { path: 'items-listed/add-item', component: AdminadditemComponent },
+            { path: 'items-listed/medicine', component: AdminmedicineComponent },
+            { path: 'items-listed/health-care', component: AdminhealthComponent },
+            { path: 'items-listed/beauty-care', component: AdminbeautyComponent },
+            { path: 'items-listed/fitness', component: AdminfitnessComponent },
+            { path: 'items-listed/equipment', component: AdminequipmentComponent },
+            { path: 'items-listed/medikit', component: AdminmedikitComponent },
             { path: 'orders', component: AdminorderComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
             { path: 'contact-requests', component: AdmincontactComponent }

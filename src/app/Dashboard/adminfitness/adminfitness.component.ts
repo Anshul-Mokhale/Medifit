@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 
-interface Agent {
+interface Fitness {
   id: number;
   name: string;
   company: string;
@@ -12,15 +12,15 @@ interface Agent {
   created_at: string;
 }
 @Component({
-  selector: 'app-adminitem',
+  selector: 'app-adminfitness',
   imports: [RouterModule, FormsModule, NgClass, NgFor],
-  templateUrl: './adminitem.component.html',
-  styleUrl: './adminitem.component.css'
+  templateUrl: './adminfitness.component.html',
+  styleUrl: './adminfitness.component.css'
 })
-export class AdminitemComponent implements OnInit {
-  users: Agent[] = [];
-  filteredUsers: Agent[] = [];
-  paginatedUsers: Agent[] = [];
+export class AdminfitnessComponent implements OnInit {
+  users: Fitness[] = [];
+  filteredUsers: Fitness[] = [];
+  paginatedUsers: Fitness[] = [];
 
   searchTerm = '';
   sortDirection: { [key: string]: boolean } = {};
@@ -66,7 +66,7 @@ export class AdminitemComponent implements OnInit {
     this.updatePaginatedUsers();
   }
 
-  sortBy(field: keyof Agent): void {
+  sortBy(field: keyof Fitness): void {
     this.sortDirection[field] = !this.sortDirection[field];
     this.filteredUsers.sort((a, b) => {
       if (a[field]! < b[field]!) return this.sortDirection[field] ? -1 : 1;
