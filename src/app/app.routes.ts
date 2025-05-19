@@ -35,6 +35,11 @@ import { AdminbeautyComponent } from './Dashboard/adminbeauty/adminbeauty.compon
 import { AdminfitnessComponent } from './Dashboard/adminfitness/adminfitness.component';
 import { AdminequipmentComponent } from './Dashboard/adminequipment/adminequipment.component';
 import { AdminmedikitComponent } from './Dashboard/adminmedikit/adminmedikit.component';
+import { AdminorderpendingComponent } from './Dashboard/adminorderpending/adminorderpending.component';
+import { AdminorderprocessedComponent } from './Dashboard/adminorderprocessed/adminorderprocessed.component';
+import { AdminorderdeliveredComponent } from './Dashboard/adminorderdelivered/adminorderdelivered.component';
+import { AdminordercancledComponent } from './Dashboard/adminordercancled/adminordercancled.component';
+import { AdminorderdetailsComponent } from './Dashboard/adminorderdetails/adminorderdetails.component';
 
 
 export const routes: Routes = [
@@ -88,6 +93,11 @@ export const routes: Routes = [
             { path: 'items-listed/equipment', component: AdminequipmentComponent },
             { path: 'items-listed/medikit', component: AdminmedikitComponent },
             { path: 'orders', component: AdminorderComponent },
+            { path: 'orders/orders-pending', component: AdminorderpendingComponent },
+            { path: 'orders/orders-processed', component: AdminorderprocessedComponent },
+            { path: 'orders/orders-delivered', component: AdminorderdeliveredComponent },
+            { path: 'orders/orders-cancled', component: AdminordercancledComponent },
+            { path: 'orders/orders-details/:id', component: AdminorderdetailsComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
             { path: 'contact-requests', component: AdmincontactComponent }
         ]
