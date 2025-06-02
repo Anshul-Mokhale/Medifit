@@ -40,6 +40,7 @@ import { AdminorderprocessedComponent } from './Dashboard/adminorderprocessed/ad
 import { AdminorderdeliveredComponent } from './Dashboard/adminorderdelivered/adminorderdelivered.component';
 import { AdminordercancledComponent } from './Dashboard/adminordercancled/adminordercancled.component';
 import { AdminorderdetailsComponent } from './Dashboard/adminorderdetails/adminorderdetails.component';
+import { AdminprintComponent } from './Dashboard/adminprint/adminprint.component';
 
 
 export const routes: Routes = [
@@ -69,6 +70,7 @@ export const routes: Routes = [
         children: [
             { path: 'login', component: LoginComponent },
             { path: 'signin', component: SigninComponent },
+            { path: 'print-receipt', component: AdminprintComponent }
 
         ]
     },
@@ -99,7 +101,8 @@ export const routes: Routes = [
             { path: 'orders/orders-cancled', component: AdminordercancledComponent },
             { path: 'orders/orders-details/:id', component: AdminorderdetailsComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
-            { path: 'contact-requests', component: AdmincontactComponent }
+            { path: 'contact-requests', component: AdmincontactComponent },
+
         ]
     },
     {

@@ -1,11 +1,14 @@
 <main
     class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
-    <div class="p-6 bg-gray-100 min-h-screen space-y-6">
+    <div class=" min-h-screen space-y-6">
+        <button (click)="printDirectReceipt(order)">Print Receipt</button>
 
         <!-- Order Summary -->
         <div class="bg-white rounded-2xl shadow-lg p-6">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-semibold text-gray-800">Order #12345</h2>
+                <h2 class="text-2xl font-semibold text-gray-800">Order Id: <span class="text-themeColor">TRK567890
+                    </span>
+                </h2>
                 <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
                     Delivered
                 </span>
@@ -15,16 +18,20 @@
                 <div class="space-y-2">
                     <p><span class="font-semibold">Order Date:</span> 18 May 2025</p>
                     <p><span class="font-semibold">Delivery Date:</span> 20 May 2025</p>
-                    <p><span class="font-semibold">Payment Mode:</span> Credit Card</p>
+                    <p><span class="font-semibold">Payment Mode:</span> Cash on Delivery</p>
                     <p><span class="font-semibold">Payment Status:</span>
                         <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs">Paid</span>
                     </p>
+                    <p><span class="font-semibold">Deliverd By:</span> Test Delivery</p>
                 </div>
                 <div class="space-y-2">
-                    <p><span class="font-semibold">Customer Email:</span> mail</p>
-                    <p><span class="font-semibold">Delivery Person:</span> John Doe</p>
-                    <p><span class="font-semibold">Tracking ID:</span> TRK567890</p>
-                    <p><span class="font-semibold">Estimated Time:</span> 2 Days</p>
+                    <p><span class="font-semibold">Customer Id:</span> 01</p>
+                    <p><span class="font-semibold">Customer Name:</span> Test User</p>
+                    <p><span class="font-semibold">Customer Email:</span> testusergmail.com</p>
+                    <p><span class="font-semibold">Customer Phone:</span> 8787878796</p>
+                    <p><span class="font-semibold">Delivered Adddress:</span> 104, Test street, Main district, State.
+                        404033</p>
+
                 </div>
             </div>
         </div>
@@ -47,8 +54,8 @@
                         <!-- Row 1 -->
                         <tr>
                             <td class="flex items-center gap-4 px-4 py-3">
-                                <img src="https://via.placeholder.com/50" alt="item"
-                                    class="w-12 h-12 rounded object-cover">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/322493344/XA/DY/YL/148756102/paracetamol-tablets-cipla-500x500.jpg"
+                                    alt="item" class="w-12 h-12 rounded object-cover">
                                 <span>Paracetamol</span>
                             </td>
                             <td class="px-4 py-3">2</td>
