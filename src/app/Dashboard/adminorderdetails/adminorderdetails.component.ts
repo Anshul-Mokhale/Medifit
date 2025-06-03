@@ -200,7 +200,7 @@ export class AdminorderdetailsComponent {
         color: #6b7280;
         position: relative;
       }
-      
+
       @media print {
         @page { margin: 0; }
         body { margin: 0.5cm; }
@@ -211,7 +211,7 @@ export class AdminorderdetailsComponent {
     <div class="container">
       <div class="watermark">MEDIFIT</div>
       <div class="header">
-        <div class="title"><img src = "https://res.cloudinary.com/dxaw17f4u/image/upload/v1745057617/medifit.png">Medifit</div>
+        <div class="title"><img src = "https://res.cloudinary.com/dxaw17f4u/image/upload/v1745057617/medifit.png"><span class="bheading">Medifit</span></div>
         <div class="status">${order.status}</div>
       </div>
 
