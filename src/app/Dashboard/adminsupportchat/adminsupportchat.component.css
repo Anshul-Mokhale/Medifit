@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-color: #fdf7f2;
+    /* background-color: #fdf7f2; */
 }
 
 .message {

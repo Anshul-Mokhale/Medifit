@@ -42,6 +42,7 @@ import { AdminordercancledComponent } from './Dashboard/adminordercancled/admino
 import { AdminorderdetailsComponent } from './Dashboard/adminorderdetails/adminorderdetails.component';
 import { AdminprintComponent } from './Dashboard/adminprint/adminprint.component';
 import { AdminsupportchatComponent } from './Dashboard/adminsupportchat/adminsupportchat.component';
+import { AdminorderprocessComponent } from './Dashboard/adminorderprocess/adminorderprocess.component';
 
 
 export const routes: Routes = [
@@ -101,6 +102,7 @@ export const routes: Routes = [
             { path: 'orders/orders-delivered', component: AdminorderdeliveredComponent },
             { path: 'orders/orders-cancled', component: AdminordercancledComponent },
             { path: 'orders/orders-details/:id', component: AdminorderdetailsComponent },
+            { path: 'orders/orders-process/:id', component: AdminorderprocessComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
             { path: 'support-tickets/view-ticket/:id', component: AdminsupportchatComponent },
 

@@ -20,6 +20,7 @@
     "@tailwindcss/postcss": "^4.0.15",
     "boxicons": "^2.1.4",
     "chart.js": "^4.4.9",
+    "html2pdf.js": "^0.10.3",
     "ng2-charts": "^8.0.0",
     "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
