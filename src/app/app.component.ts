@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, FormsModule, HttpClientModule],
+  imports: [RouterModule, FormsModule, HttpClientModule,],
   providers: [ContactServiceService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

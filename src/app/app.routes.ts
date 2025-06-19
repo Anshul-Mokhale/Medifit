@@ -43,6 +43,8 @@ import { AdminorderdetailsComponent } from './Dashboard/adminorderdetails/admino
 import { AdminprintComponent } from './Dashboard/adminprint/adminprint.component';
 import { AdminsupportchatComponent } from './Dashboard/adminsupportchat/adminsupportchat.component';
 import { AdminorderprocessComponent } from './Dashboard/adminorderprocess/adminorderprocess.component';
+import { AdmintransactionComponent } from './Dashboard/admintransaction/admintransaction.component';
+import { AdmincontactviewComponent } from './Dashboard/admincontactview/admincontactview.component';
 
 
 export const routes: Routes = [
@@ -105,8 +107,9 @@ export const routes: Routes = [
             { path: 'orders/orders-process/:id', component: AdminorderprocessComponent },
             { path: 'support-tickets', component: AdminsupportComponent },
             { path: 'support-tickets/view-ticket/:id', component: AdminsupportchatComponent },
-
+            { path: 'transactions', component: AdmintransactionComponent },
             { path: 'contact-requests', component: AdmincontactComponent },
+            { path: 'contact-requests/view/:id', component: AdmincontactviewComponent }
         ]
     },
     {

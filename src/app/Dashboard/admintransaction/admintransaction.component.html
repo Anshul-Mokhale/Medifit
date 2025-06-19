@@ -1,14 +1,16 @@
 <main
     class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-        <h1 class="text-2xl font-semibold text-[#503217]">Contact Requests</h1>
+        <h1 class="text-2xl font-semibold text-[#503217]">Transactions</h1>
         <div class="flex items-center text-md gap-1 text-gray-600 mt-2 md:mt-0">
             <a routerLink="/admin/dashboard" class="hover:underline cursor-pointer">Dashboard</a>
             <!-- <span>&gt;</span> -->
             <span>/</span>
-            <p class="text-[#503217] font-medium">Contact Request</p>
+            <p class="text-[#503217] font-medium">Transaction</p>
         </div>
     </div>
+
 
     <div class="bg-white shadow p-3 rounded-lg">
         <!-- Controls -->
@@ -33,8 +35,10 @@
                     <tr>
                     <tr>
                         <th class="p-2 cursor-pointer" (click)="sortBy('id')">ID ⬍</th>
-                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('name')">Name ⬍</th>
-                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('email')">Email ⬍</th>
+                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('name')">User Name ⬍</th>
+                        <th class="p-2 cursor-pointer text-start">Payment mode </th>
+                        <th class="p-2 cursor-pointer text-start">Status </th>
+                        <th class="p-2 cursor-pointer text-start" (click)="sortBy('person')">Amount ⬍</th>
                         <th class="p-2 cursor-pointer" (click)="sortBy('created_at')">Created At ⬍</th>
                         <th class="p-2">Action</th>
                     </tr>
@@ -43,11 +47,13 @@
                     <tr *ngFor="let user of paginatedUsers">
                         <td class="p-2 text-center">{{ user.id }}</td>
                         <td class="p-2">{{ user.name }}</td>
-                        <td class="p-2">{{ user.email }}</td>
+                        <td class="p-2">{{ user.company }}</td>
+                        <td class="p-2">{{ user.status }}</td>
+                        <td class="p-2">{{ user.person }}</td>
                         <td class="p-2 text-center">{{ user.created_at }}</td>
                         <td class="p-2 flex items-center justify-center gap-2">
                             <button class="px-3 py-1 text-themeColor"><i class='bx bx-trash text-xl'></i></button>
-                            <a routerLink="view/2" class="px-3 py-1 text-themeColor"><i
+                            <a routerLink="/admin/orders/orders-details/2" class="px-3 py-1 text-themeColor"><i
                                     class='bx bx-right-arrow-alt text-xl'></i></a>
                         </td>
                     </tr>

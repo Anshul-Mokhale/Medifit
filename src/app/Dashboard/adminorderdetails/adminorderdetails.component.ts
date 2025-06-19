@@ -15,12 +15,16 @@ export class AdminorderdetailsComponent {
     deliveryDate: '20 May 2025',
     paymentMode: 'Cash on Delivery',
     paymentStatus: 'Paid',
+    TransactionId: '25MDFIT1102222',
+    TransactionAmount: '₹ 4130.00',
+    TransactionDate: '01/06/2025 03:57PM',
     status: 'Delivered',
     customerId: '01',
     customerName: 'Test User',
     customerEmail: 'testuser@gmail.com',
     customerPhone: '8787878796',
     customerAddress: '104, Test Street, Main District, State, 404033',
+
     items: [
       { name: 'Paracetamol', quantity: 2, price: 30 },
       { name: 'Vitamin C Tablets', quantity: 1, price: 50 }
@@ -51,14 +55,12 @@ export class AdminorderdetailsComponent {
     const content = `
 <html>
   <head>
-    <title>MediFit Receipt</title>
+    <title>MediFit Receipt 25MDFIT1102222</title>
     <style>
          body {
         font-family: 'Segoe UI', sans-serif;
-        background-color: #f9fafb;
-        padding: 40px;
+        background-color: white;
         color: #111827;
-        position: relative;
       }
       
       .watermark {
@@ -83,7 +85,7 @@ export class AdminorderdetailsComponent {
         margin: auto;
         background: white;
         border-radius: 12px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        // box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         padding: 30px;
         position: relative;
         z-index: 1;
@@ -213,7 +215,7 @@ export class AdminorderdetailsComponent {
       <div class="watermark">MEDIFIT</div>
       <div class="header">
         <div class="title"><img src = "https://res.cloudinary.com/dxaw17f4u/image/upload/v1745057617/medifit.png"><span class="bheading">Medifit</span></div>
-        <div class="status">${order.status}</div>
+      <div>Date: ${new Date().toLocaleDateString('en-IN')}</div>
       </div>
 
       <div class="details">
@@ -221,15 +223,20 @@ export class AdminorderdetailsComponent {
           <p><span class="label">Order ID:</span> ${order.orderNumber}</p>
           <p><span class="label">Order Date:</span> ${order.orderDate}</p>
           <p><span class="label">Delivery Date:</span> ${order.deliveryDate}</p>
-          <p><span class="label">Payment Mode:</span> ${order.paymentMode}</p>
           <p><span class="label">Payment Status:</span> ${order.paymentStatus}</p>
+          <p><span class="label">Transaction ID:</span> ${order.TransactionId}</p>
+          <p><span class="label">Transaction Amount:</span> ${order.TransactionAmount}</p>
+          <p><span class="label">Transaction Date:</span> ${order.TransactionDate}</p>
         </div>
         <div class="column">
+          <p><span class="label">Payment Mode:</span> ${order.paymentMode}</p>
+          <p><span class="label">Order Status:</span> ${order.status}</p>
           <p><span class="label">Customer ID:</span> ${order.customerId}</p>
           <p><span class="label">Customer Name:</span> ${order.customerName}</p>
           <p><span class="label">Email:</span> ${order.customerEmail}</p>
           <p><span class="label">Phone:</span> ${order.customerPhone}</p>
           <p><span class="label">Address:</span> ${order.customerAddress}</p>
+        
         </div>
       </div>
 
