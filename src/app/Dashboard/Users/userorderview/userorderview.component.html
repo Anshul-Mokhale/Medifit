@@ -1,0 +1,115 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+    <div class=" min-h-screen space-y-6">
+        <div class="flex justify-between items-center mb-6">
+            <button (click)="downloadReceiptAsPDF(order)"
+                class="bg-[#503217] text-white px-4 py-2 rounded hover:bg-[#6a4225] transition">
+                Download Receipt as PDF
+            </button>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-gray-800">Order Id: <span class="text-themeColor">TRK567890
+                    </span>
+                </h2>
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+                    Delivered
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+                <div class="space-y-2">
+                    <p><span class="font-semibold">Order Date:</span> 18 May 2025</p>
+                    <p><span class="font-semibold">Delivery Date:</span> 20 May 2025</p>
+                    <p><span class="font-semibold">Payment Mode:</span> Cash on Delivery</p>
+                    <p><span class="font-semibold">Payment Status:</span>
+                        <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs">Paid</span>
+                    </p>
+                    <p><span class="font-semibold">Deliverd By:</span> Test Delivery</p>
+                </div>
+                <div class="space-y-2">
+                    <p><span class="font-semibold">Customer Id:</span> 01</p>
+                    <p><span class="font-semibold">Customer Name:</span> Test User</p>
+                    <p><span class="font-semibold">Customer Email:</span> testusergmail.com</p>
+                    <p><span class="font-semibold">Customer Phone:</span> 8787878796</p>
+                    <p><span class="font-semibold">Delivered Adddress:</span> 104, Test street, Main district, State.
+                        404033</p>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+                <div class="space-y-2">
+                    <p><span class="font-semibold">Transaction Id:</span> 25MDIFT1102222</p>
+                    <p><span class="font-semibold">Transaction Amount:</span>
+                        <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs">4103.00 /-</span>
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <p><span class="font-semibold">Transaction Date:</span> 01/06/2025 03:57PM</p>
+                    <!-- Keep this in if else -->
+                    <p><span class="font-semibold">Amount Recived By:</span> Test User</p>
+                    <p><span class="font-semibold">UPI Id:</span> testupi_okaxis.com</p>
+                    <!-- uptil this -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Ordered Items Table -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Items in this Order</h3>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm text-left">
+                    <thead class="bg-gray-50 border-b text-gray-600">
+                        <tr>
+                            <th class="px-4 py-2">Item</th>
+                            <th class="px-4 py-2">Quantity</th>
+                            <th class="px-4 py-2">Price</th>
+                            <th class="px-4 py-2">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-800 divide-y">
+                        <!-- Row 1 -->
+                        <tr>
+                            <td class="flex items-center gap-4 px-4 py-3">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/322493344/XA/DY/YL/148756102/paracetamol-tablets-cipla-500x500.jpg"
+                                    alt="item" class="w-12 h-12 rounded object-cover">
+                                <span>Paracetamol</span>
+                            </td>
+                            <td class="px-4 py-3">2</td>
+                            <td class="px-4 py-3">₹30</td>
+                            <td class="px-4 py-3">₹60</td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td class="flex items-center gap-4 px-4 py-3">
+                                <img src="https://via.placeholder.com/50" alt="item"
+                                    class="w-12 h-12 rounded object-cover">
+                                <span>Vitamin C Tablets</span>
+                            </td>
+                            <td class="px-4 py-3">1</td>
+                            <td class="px-4 py-3">₹50</td>
+                            <td class="px-4 py-3">₹50</td>
+                        </tr>
+                        <!-- Total -->
+                        <tr class="bg-gray-50 font-semibold">
+                            <td colspan="3" class="px-4 py-3 text-right">Grand Total</td>
+                            <td class="px-4 py-3">₹110</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

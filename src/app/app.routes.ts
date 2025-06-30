@@ -45,6 +45,10 @@ import { AdminsupportchatComponent } from './Dashboard/adminsupportchat/adminsup
 import { AdminorderprocessComponent } from './Dashboard/adminorderprocess/adminorderprocess.component';
 import { AdmintransactionComponent } from './Dashboard/admintransaction/admintransaction.component';
 import { AdmincontactviewComponent } from './Dashboard/admincontactview/admincontactview.component';
+import { UserordersComponent } from './Dashboard/Users/userorders/userorders.component';
+import { UserorderviewComponent } from './Dashboard/Users/userorderview/userorderview.component';
+import { UseraccountupdateComponent } from './Dashboard/Users/useraccountupdate/useraccountupdate.component';
+import { UserupdatepasswordComponent } from './Dashboard/Users/userupdatepassword/userupdatepassword.component';
 
 
 export const routes: Routes = [
@@ -118,6 +122,11 @@ export const routes: Routes = [
         children: [
             { path: 'dashboard', component: UserhomeComponent },
             { path: 'transactions', component: TransactionComponent },
+            { path: 'orders', component: UserordersComponent },
+            { path: 'orders/orders-details/:id', component: UserorderviewComponent },
+            { path: 'settings/update-profile', component: UseraccountupdateComponent },
+            { path: 'settings/update-password', component: UserupdatepasswordComponent }
+
         ]
     },
     { path: '**', component: NotfoundComponent }

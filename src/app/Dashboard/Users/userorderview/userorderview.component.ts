@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import html2pdf from 'html2pdf.js';
+
+
+
 
 @Component({
-  selector: 'app-adminorderdetails',
+  selector: 'app-userorderview',
   imports: [RouterModule],
-  templateUrl: './adminorderdetails.component.html',
-  styleUrl: './adminorderdetails.component.css'
+  templateUrl: './userorderview.component.html',
+  styleUrl: './userorderview.component.css'
 })
-export class AdminorderdetailsComponent {
+export class UserorderviewComponent {
 
   order = {
     orderNumber: 'TRK567890',
@@ -32,13 +36,8 @@ export class AdminorderdetailsComponent {
   };
 
 
-  printDirectReceipt(order: any) {
-    const receiptWindow = window.open('', '_blank', 'width=800,height=1000');
+  generateReceiptHTML(order: any) {
 
-    if (!receiptWindow) {
-      alert("Popup blocked. Please allow popups for this website.");
-      return;
-    }
 
     const itemsHtml = order.items.map((item: any, i: number) => `
     <tr style="background: ${i % 2 === 0 ? '' : ''};">
@@ -52,7 +51,7 @@ export class AdminorderdetailsComponent {
 
     const total = order.items.reduce((sum: number, item: any) => sum + (item.price * item.quantity), 0);
 
-    const content = `
+    return `
 <html>
   <head>
     <title>MediFit Receipt 25MDFIT1102222</title>
@@ -278,9 +277,24 @@ export class AdminorderdetailsComponent {
   </body>
 </html>
 `;
+  }
+  downloadReceiptAsPDF(order: any) {
+    const content = this.generateReceiptHTML(order);
+    const container = document.createElement('div');
+    container.innerHTML = content;
+    document.body.appendChild(container);
 
-    receiptWindow.document.write(content);
-    receiptWindow.document.close();
+    const options = {
+      margin: 0.5,
+      filename: `receipt_${order.orderNumber}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    html2pdf().set(options).from(container).save().then(() => {
+      document.body.removeChild(container);
+    });
   }
 
 }
