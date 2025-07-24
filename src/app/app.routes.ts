@@ -49,6 +49,8 @@ import { UserordersComponent } from './Dashboard/Users/userorders/userorders.com
 import { UserorderviewComponent } from './Dashboard/Users/userorderview/userorderview.component';
 import { UseraccountupdateComponent } from './Dashboard/Users/useraccountupdate/useraccountupdate.component';
 import { UserupdatepasswordComponent } from './Dashboard/Users/userupdatepassword/userupdatepassword.component';
+import { UseraddressComponent } from './Dashboard/Users/useraddress/useraddress.component';
+import { UseraccountdeleteComponent } from './Dashboard/Users/useraccountdelete/useraccountdelete.component';
 
 
 export const routes: Routes = [
@@ -125,7 +127,11 @@ export const routes: Routes = [
             { path: 'orders', component: UserordersComponent },
             { path: 'orders/orders-details/:id', component: UserorderviewComponent },
             { path: 'settings/update-profile', component: UseraccountupdateComponent },
-            { path: 'settings/update-password', component: UserupdatepasswordComponent }
+            { path: 'settings/update-password', component: UserupdatepasswordComponent },
+            { path: 'settings/address-management', component: UseraddressComponent },
+            {
+                path: 'settings/delete-account', component: UseraccountdeleteComponent
+            }
 
         ]
     },
