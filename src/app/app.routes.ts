@@ -53,6 +53,10 @@ import { UseraddressComponent } from './Dashboard/Users/useraddress/useraddress.
 import { UseraccountdeleteComponent } from './Dashboard/Users/useraccountdelete/useraccountdelete.component';
 import { DeliveryhomeComponent } from './Dashboard/Delivery/deliveryhome/deliveryhome.component';
 import { DeliveryordersComponent } from './Dashboard/Delivery/deliveryorders/deliveryorders.component';
+import { DeliverydeleteaccountComponent } from './Dashboard/Delivery/deliverydeleteaccount/deliverydeleteaccount.component';
+import { DeliveryupdateprofileComponent } from './Dashboard/Delivery/deliveryupdateprofile/deliveryupdateprofile.component';
+import { DeliveryupdatepasswordComponent } from './Dashboard/Delivery/deliveryupdatepassword/deliveryupdatepassword.component';
+import { DeliveryordersviewComponent } from './Dashboard/Delivery/deliveryordersview/deliveryordersview.component';
 
 
 export const routes: Routes = [
@@ -142,7 +146,11 @@ export const routes: Routes = [
         component: DashboardLayoutComponent,
         children: [
             { path: 'dashboard', component: DeliveryhomeComponent },
-            { path: 'orders', component: DeliveryordersComponent }
+            { path: 'orders', component: DeliveryordersComponent },
+            { path: 'orders/orders-details/:id', component: DeliveryordersviewComponent },
+            { path: 'settings/delete-account', component: DeliverydeleteaccountComponent },
+            { path: 'settings/update-profile', component: DeliveryupdateprofileComponent },
+            { path: 'settings/update-password', component: DeliveryupdatepasswordComponent }
         ]
     },
     { path: '**', component: NotfoundComponent }

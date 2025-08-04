@@ -1,0 +1,75 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+
+    <div class="max-w-2xl mx-auto mt-10 p-8 bg-white shadow-xl rounded-2xl border border-[#e2dfce]">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[#503217] tracking-wide">
+            Update Profile
+        </h2>
+
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="space-y-6">
+            <!-- Profile Photo Upload -->
+            <div class="flex flex-col items-center gap-3">
+                <div class="relative group">
+                    <img *ngIf="profileForm.value.profile_pic" [src]="profileForm.value.profile_pic"
+                        class="h-24 w-24 rounded-full object-cover border-4 border-[#503217] shadow-md transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <input type="file" accept="image/*" (change)="onProfilePicChange($event)"
+                    class="text-sm text-gray-700" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] placeholder:text-gray-500"
+                    formControlName="name" type="text" placeholder="Full Name" />
+                <input
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] placeholder:text-gray-500"
+                    formControlName="email" type="email" placeholder="Email" />
+                <input
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] placeholder:text-gray-500"
+                    formControlName="phone" type="tel" placeholder="Phone" />
+                <input
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] placeholder:text-gray-500"
+                    formControlName="age" type="number" placeholder="Age" />
+
+                <select
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] text-gray-700"
+                    formControlName="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <select
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#503217] text-gray-700"
+                    formControlName="blood_group">
+                    <option value="" disabled selected>Select Blood Group</option>
+                    <option *ngFor="let group of bloodGroups" [value]="group">{{ group }}</option>
+                </select>
+            </div>
+
+            <!-- Identity Proof Upload -->
+            <div class="space-y-2">
+                <label class="block text-[#503217] font-semibold">Identity Proof</label>
+                <img *ngIf="profileForm.value.identity_proof" [src]="profileForm.value.identity_proof"
+                    class="h-40 w-full object-cover border rounded-lg shadow-sm" />
+                <input type="file" accept="image/*" (change)="onIdentityProofChange($event)"
+                    class="text-sm text-gray-700" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-end gap-4 pt-4 border-t border-gray-200">
+                <button type="button" (click)="onCancel()"
+                    class="px-5 py-2.5 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition">
+                    Cancel
+                </button>
+                <button type="submit"
+                    class="px-5 py-2.5 rounded-lg bg-[#503217] hover:bg-[#3d2714] text-white font-medium shadow-md transition">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+</main>

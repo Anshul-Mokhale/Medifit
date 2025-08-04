@@ -198,30 +198,21 @@
             </button>
 
             <div *ngIf="itemsDropdownOpen" class="ml-8 flex flex-col space-y-1 text-sm text-themeColor">
-                <a routerLink="/user/settings/update-profile" routerLinkActive="active" (click)="toggleSidebar()"
+                <a routerLink="/delivery/settings/update-profile" routerLinkActive="active" (click)="toggleSidebar()"
                     class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
                     Update Profile
                 </a>
-                <a routerLink="/user/settings/update-password" routerLinkActive="active" (click)="toggleSidebar()"
+                <a routerLink="/delivery/settings/update-password" routerLinkActive="active" (click)="toggleSidebar()"
                     class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
                     Update Password
                 </a>
-                <a routerLink="/user/settings/address-management" routerLinkActive="active" (click)="toggleSidebar()"
-                    class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
-                    Address Management
-                </a>
-                <a routerLink="/user/settings/delete-account" routerLinkActive="active" (click)="toggleSidebar()"
+                <a routerLink="/delivery/settings/delete-account" routerLinkActive="active" (click)="toggleSidebar()"
                     class="space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
                     Delete Account
                 </a>
 
             </div>
         </div>
-        <a routerLink="/admin/support-tickets" routerLinkActive="active" (click)="toggleSidebar()"
-            class="flex items-center space-x-2 p-2 rounded-md hover:bg-[#e2dfcc] transition duration-200">
-            <i class='bx bx-support text-xl'></i>
-            <span class="text-md font-medium">Support Tickets</span>
-        </a>
 
     </nav>
 </aside>

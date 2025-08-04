@@ -1,0 +1,45 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 min-h-screen bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular flex items-center justify-center">
+    <div class="bg-white shadow-xl rounded-2xl p-10 w-full max-w-lg">
+        <h1 class="text-3xl font-bold text-red-600 mb-6 text-center">
+            Delete Your Account
+        </h1>
+
+        <p class="text-gray-700 mb-4 text-center">
+            Deleting your account is a <span class="font-bold text-red-600">permanent action</span>.<br>
+            Once deleted:
+        </p>
+
+        <ul class="list-disc list-inside text-gray-600 mb-6 pl-4">
+            <li>All your data, including profile and settings, will be removed.</li>
+            <li>You will lose access to all services associated with this account.</li>
+            <li>This action <span class="font-bold">cannot be undone</span>.</li>
+        </ul>
+
+        <p class="text-gray-700 mb-2">
+            To confirm, please type the following text exactly:
+        </p>
+
+        <div
+            class="bg-gray-100 border border-gray-300 rounded-md p-3 font-mono text-base text-gray-800 mb-4 text-center select-none">
+            DELETE MY ACCOUNT
+        </div>
+
+        <input type="text" [(ngModel)]="confirmationText" placeholder="Type here to confirm"
+            class="w-full border border-gray-300 rounded-lg p-3 mb-6 focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
+
+        <div class="flex justify-end gap-4">
+            <button (click)="cancel()"
+                class="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition font-semibold">
+                Cancel
+            </button>
+
+            <button (click)="confirmDelete()" [disabled]="confirmationText !== 'DELETE MY ACCOUNT'" [ngClass]="{
+                    'bg-red-600 text-white hover:bg-red-700': confirmationText === 'DELETE MY ACCOUNT',
+                    'bg-red-300 text-gray-200 cursor-not-allowed': confirmationText !== 'DELETE MY ACCOUNT'
+                }" class="px-6 py-2 rounded-lg transition font-semibold">
+                Delete Account
+            </button>
+        </div>
+    </div>
+</main>
