@@ -1,0 +1,69 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+        <h1 class="text-2xl font-semibold text-[#503217]">Orders</h1>
+        <div class="flex items-center text-md gap-1 text-gray-600 mt-2 md:mt-0">
+            <a routerLink="/admin/dashboard" class="hover:underline cursor-pointer">Dashboard</a>
+            <!-- <span>&gt;</span> -->
+            <span>/</span>
+            <p class="text-[#503217] font-medium">Orders</p>
+        </div>
+    </div>
+
+
+    <div class="bg-white shadow p-3 rounded-lg">
+        <!-- Controls -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-4 gap-3">
+            <div class="flex items-center gap-2">
+                <label class="text-sm text-gray-600">Show</label>
+                <select (change)="changeEntriesPerPage($event)" class="border rounded px-2 py-1 text-sm">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                </select>
+                <span class="text-sm text-gray-600">entries</span>
+            </div>
+            <input [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Search by name or email"
+                class="border px-3 py-1 rounded w-full md:w-1/3 text-sm" />
+        </div>
+
+        <!-- Scrollable Table -->
+        <div class="overflow-x-auto">
+            <table class="min-w-[700px] w-full text-sm ">
+                <thead class="bg-[#503217] text-white">
+                    <tr>
+                    <tr>
+                        <th class="p-2 cursor-pointer text-left" (click)="sortBy('id')">Order ID ⬍</th>
+                        <th class="p-2 cursor-pointer text-start">Status </th>
+                        <th class="p-2 cursor-pointer" (click)="sortBy('created_at')">Order date ⬍</th>
+                        <th class="p-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr *ngFor="let user of paginatedUsers">
+                        <td class="p-2 ">{{ user.id }}</td>
+                        <td class="p-2">{{ user.status }}</td>
+                        <td class="p-2 text-center">{{ user.created_at }}</td>
+                        <td class="p-2 flex items-center justify-center gap-2">
+                            <a routerLink="/user/orders/orders-details/2"
+                                class="px-3 py-1 flex items-center justify-center text-themeColor"> View <i
+                                    class='bx bx-right-arrow-alt text-xl'></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-end mt-4 gap-2 text-sm">
+            <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)" [ngClass]="{
+      'bg-[#503217] text-white': i + 1 === currentPage,
+      'bg-white': i + 1 !== currentPage
+  }" class="px-2 py-1 border rounded">
+                {{ i + 1 }}
+            </button>
+        </div>
+    </div>
+
+</main>

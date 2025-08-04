@@ -51,6 +51,8 @@ import { UseraccountupdateComponent } from './Dashboard/Users/useraccountupdate/
 import { UserupdatepasswordComponent } from './Dashboard/Users/userupdatepassword/userupdatepassword.component';
 import { UseraddressComponent } from './Dashboard/Users/useraddress/useraddress.component';
 import { UseraccountdeleteComponent } from './Dashboard/Users/useraccountdelete/useraccountdelete.component';
+import { DeliveryhomeComponent } from './Dashboard/Delivery/deliveryhome/deliveryhome.component';
+import { DeliveryordersComponent } from './Dashboard/Delivery/deliveryorders/deliveryorders.component';
 
 
 export const routes: Routes = [
@@ -133,6 +135,14 @@ export const routes: Routes = [
                 path: 'settings/delete-account', component: UseraccountdeleteComponent
             }
 
+        ]
+    },
+    {
+        path: 'delivery',
+        component: DashboardLayoutComponent,
+        children: [
+            { path: 'dashboard', component: DeliveryhomeComponent },
+            { path: 'orders', component: DeliveryordersComponent }
         ]
     },
     { path: '**', component: NotfoundComponent }

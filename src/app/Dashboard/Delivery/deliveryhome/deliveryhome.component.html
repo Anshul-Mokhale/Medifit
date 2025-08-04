@@ -1,0 +1,75 @@
+<main
+    class="ml-0 md:ml-64 mt-16 p-6 h-[calc(100vh-4rem)] bg-[#f3f1e2] overflow-y-auto transition-all duration-300 poppins-regular">
+    <!-- <div class="greet md:p-4 p-1">
+        <h1 class="text-3xl text-themeColor">Welcome! Admin</h1>
+    </div> -->
+    <div
+        class="greet md:p-6 p-4 mb-2 rounded-2xl shadow-lg bg-gradient-to-r from-[#f3e7dd] via-white to-[#f3e7dd] animate-fadeIn">
+        <h1 class="text-3xl md:text-4xl font-bold text-[#503217] tracking-wide">
+            Welcome, Delivery!
+        </h1>
+        <p class="text-sm md:text-base text-[#7a5a3a] mt-2">
+            Hope you're having a productive day!
+        </p>
+    </div>
+
+
+    <div id="pageContent" class="space-y-4 md:p-4 p-1">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <!-- Users -->
+            <div class="bg-white rounded-2xl shadow p-6 text-center">
+                <div class="text-5xl  text-themeColor">{{ usersCount }}</div>
+                <div class="h-1 w-full bg-[#e2dfcc] mx-auto my-2 rounded"></div>
+                <div class="text-md font-semibold text-gray-700 ">No. of Orders</div>
+            </div>
+
+            <!-- Agents -->
+            <div class="bg-white rounded-2xl shadow p-6 text-center">
+                <div class="text-5xl  text-themeColor">{{ agentsCount }}</div>
+                <div class="h-1 w-full bg-[#e2dfcc] mx-auto my-2 rounded"></div>
+                <div class="text-md font-semibold text-gray-700">Total Delivery <Picture></Picture>ending</div>
+            </div>
+
+            <!-- Delivery Boys -->
+            <div class="bg-white rounded-2xl shadow p-6 text-center">
+                <div class="text-5xl  text-themeColor">{{ deliveryCount }}</div>
+                <div class="h-1 w-full bg-[#e2dfcc] mx-auto my-2 rounded"></div>
+                <div class="text-md font-semibold text-gray-700">No. of Order Delivered</div>
+            </div>
+
+            <!-- Products -->
+            <div class="bg-white rounded-2xl shadow p-6 text-center">
+                <div class="text-5xl  text-themeColor">{{ productsCount }}</div>
+                <div class="h-1 w-full bg-[#e2dfcc] mx-auto my-2 rounded"></div>
+                <div class="text-md font-semibold text-gray-700">No. of Delivery Cancled</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="home2 flex flex-col-reverse md:flex-row-reverse gap-4 md:p-4 p-2 h-auto md:h-[600px]">
+        <!-- Right Section -->
+        <div class="home2right bg-white rounded-2xl p-4 shadow-md flex-1 overflow-hidden">
+            <h3 class="text-xl font-semibold mb-3 text-themeColor"><i class='bx bx-package text-xl'></i> Delivery
+                Updates
+            </h3>
+            <div class="overflow-y-auto max-h-full space-y-3 pr-2 pb-4 custom-scroll">
+
+                <a routerLink="/test" *ngFor="let order of orders"
+                    class="p-4 bg-[#f3f1e2] border border-themeColor rounded-lg shadow-sm hover:bg-[#e2dfcc] transition flex justify-between">
+                    <div>
+                        <p class="font-medium text-themeColor">Order #{{ order.id }}</p>
+                        <p class="text-xs text-themeColor mt-1">Status: Out for Delivery</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class='bx bxs-chevron-right text-xl'></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</main>
