@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactServiceService {
-  private apiUrl = 'http://192.168.1.21:3000/api/contact/contact-request';
+  private apiUrl = 'https://api.develope4u.site/api/contact/';
 
   constructor(private http: HttpClient) { }
 
